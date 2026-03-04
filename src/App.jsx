@@ -96,35 +96,37 @@ import Navbar from './components/Navbar'; function App() {
 
             {/* Project 2 */}
             <div className="group cursor-pointer flex flex-col gap-6 border-t border-gray-300 pt-12">
-              <div className="w-full aspect-[21/9] bg-gray-200 overflow-hidden flex items-center justify-center">
-                <span className="text-gray-400 font-medium">Image Placeholder 2 (Large)</span>
+              <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden flex items-end justify-end relative bg-gray-200">
+                <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center">Image Placeholder 2</span>
               </div>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-2">
                 <div>
-                  <h3 className="text-3xl font-bold text-black group-hover:underline decoration-2 underline-offset-4">E-Commerce App UX Improvement</h3>
-                  <div className="flex gap-2 mt-4">
-                    <span className="border border-gray-300 text-gray-600 text-sm px-3 py-1">App Design</span>
-                    <span className="border border-gray-300 text-gray-600 text-sm px-3 py-1">Prototyping</span>
+                  <p className="text-gray-500 font-medium text-sm md:text-base mb-2">서브타이틀 영역</p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-black transition-colors duration-300">E-Commerce App UX Improvement</h3>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">App Design</span>
+                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">Prototyping</span>
+                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">2023. 08. 22</span>
                   </div>
                 </div>
-                <p className="text-gray-500 text-lg">2023. 08. 22</p>
               </div>
             </div>
 
             {/* Project 3 */}
             <div className="group cursor-pointer flex flex-col gap-6 border-t border-gray-300 pt-12">
-              <div className="w-full aspect-[21/9] bg-gray-200 overflow-hidden flex items-center justify-center">
-                <span className="text-gray-400 font-medium">Image Placeholder 3 (Large)</span>
+              <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden flex items-end justify-end relative bg-gray-200">
+                <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center">Image Placeholder 3</span>
               </div>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-2">
                 <div>
-                  <h3 className="text-3xl font-bold text-black group-hover:underline decoration-2 underline-offset-4">B2B SaaS Dashboard Pattern</h3>
-                  <div className="flex gap-2 mt-4">
-                    <span className="border border-gray-300 text-gray-600 text-sm px-3 py-1">Design System</span>
-                    <span className="border border-gray-300 text-gray-600 text-sm px-3 py-1">B2B</span>
+                  <p className="text-gray-500 font-medium text-sm md:text-base mb-2">서브타이틀 영역</p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-black transition-colors duration-300">B2B SaaS Dashboard Pattern</h3>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">Design System</span>
+                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">B2B</span>
+                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">2023. 04. 05</span>
                   </div>
                 </div>
-                <p className="text-gray-500 text-lg">2023. 04. 05</p>
               </div>
             </div>
           </div>
