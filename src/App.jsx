@@ -282,14 +282,14 @@ function App() {
         </div>
 
         <div className="w-full max-w-[1800px] mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 transform scale-90 md:scale-[0.8] origin-center">
             {/* Card 1 */}
-            <div className="group relative w-full aspect-[3/5] bg-[#ffffff] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
+            <div className="group relative w-full aspect-[3/5] bg-[#ffffff] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.08] transition-transform duration-500 ease-out shadow-2xl">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
                   src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
-                  alt="intuition"
+                  alt="ntuition"
                   className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
@@ -321,7 +321,7 @@ function App() {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative w-full aspect-[3/5] bg-[#d9331d] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
+            <div className="group relative w-full aspect-[3/5] bg-[#d9331d] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.08] transition-transform duration-500 ease-out shadow-2xl">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
@@ -344,7 +344,7 @@ function App() {
                 {/* Middle: Title */}
                 <div className="flex-1 flex items-center">
                   <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none normal-case" style={{ fontWeight: 200 }}>
-                    flow
+                    Flow
                   </h3>
                 </div>
 
@@ -358,7 +358,7 @@ function App() {
             </div>
 
             {/* Card 3 */}
-            <div className="group relative w-full aspect-[3/5] bg-[#1b1b1b] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
+            <div className="group relative w-full aspect-[3/5] bg-[#1b1b1b] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.08] transition-transform duration-500 ease-out shadow-2xl">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
@@ -381,7 +381,7 @@ function App() {
                 {/* Middle: Title */}
                 <div className="flex-1 flex items-center">
                   <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none normal-case" style={{ fontWeight: 200 }}>
-                    context
+                    Context
                   </h3>
                 </div>
 
