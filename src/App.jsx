@@ -273,8 +273,8 @@ function App() {
       {/* My Approach Section */}
       <section id="approach" className="w-full bg-[#121212] pt-32 pb-48 text-white relative">
         <div className="w-full px-4 md:px-8 mb-24 flex flex-col items-center">
-          <div className="mb-6">
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 border border-gray-700 px-4 py-2 rounded-full backdrop-blur-sm">ABOUT</span>
+          <div className="mb-12">
+            <span className="text-[30px] uppercase tracking-[0.2em] font-bold text-gray-400 border-[3px] border-gray-700 px-10 py-5 rounded-[4rem] backdrop-blur-sm">ABOUT</span>
           </div>
           <h2 className="text-8xl md:text-[10rem] lg:text-[14rem] font-black tracking-tighter leading-tight px-2 hover:text-gray-300 transition-colors text-center uppercase">
             MY APPROACH.
@@ -284,29 +284,36 @@ function App() {
         <div className="w-full max-w-[1800px] mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <div className="group relative w-full aspect-[4/5] bg-[#1a1a1a] rounded-3xl overflow-hidden cursor-pointer border border-white/5">
+            <div className="group relative w-full aspect-[4/5] bg-[#1a1a1a] rounded-[2.5rem] overflow-hidden cursor-pointer border border-white/5">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop" 
-                  alt="김풀잎" 
-                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out" 
+                <img
+                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
+                  alt="직관"
+                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
               </div>
-              
-              <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between z-10 transition-transform duration-500 ease-out group-hover:translate-y-[-10px]">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-white transition-all duration-500">
-                    김풀잎
-                  </h3>
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 ease-out">
-                    <ArrowRight size={18} />
-                  </div>
+
+              <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col z-10 transition-transform duration-500 ease-out group-hover:-translate-y-2">
+                {/* Top: Number */}
+                <div className="flex-none">
+                  <span className="text-3xl md:text-4xl font-semibold tracking-tight text-white/80 group-hover:text-white transition-colors duration-500">
+                    (01)
+                  </span>
                 </div>
-                <div>
-                  <p className="text-lg md:text-xl text-gray-400 group-hover:text-white transition-colors duration-500 font-medium break-keep">
+
+                {/* Middle: Title */}
+                <div className="flex-1 flex items-center">
+                  <h3 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none" style={{ fontWeight: 200 }}>
+                    직관
+                  </h3>
+                </div>
+
+                {/* Bottom: Description */}
+                <div className="flex-none">
+                  <p className="text-xl md:text-2xl text-gray-400 group-hover:text-white transition-colors duration-500 font-medium break-keep leading-snug w-[95%]">
                     첫 진입부터 다음 행동이 보이는 구조
                   </p>
                 </div>
@@ -314,29 +321,36 @@ function App() {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative w-full aspect-[4/5] bg-[#1a1a1a] rounded-3xl overflow-hidden cursor-pointer border border-white/5">
+            <div className="group relative w-full aspect-[4/5] bg-[#1a1a1a] rounded-[2.5rem] overflow-hidden cursor-pointer border border-white/5">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop" 
-                  alt="흐름" 
-                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out" 
+                <img
+                  src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop"
+                  alt="흐름"
+                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
               </div>
-              
-              <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between z-10 transition-transform duration-500 ease-out group-hover:translate-y-[-10px]">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-white transition-all duration-500">
+
+              <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col z-10 transition-transform duration-500 ease-out group-hover:-translate-y-2">
+                {/* Top: Number */}
+                <div className="flex-none">
+                  <span className="text-3xl md:text-4xl font-semibold tracking-tight text-white/80 group-hover:text-white transition-colors duration-500">
+                    (02)
+                  </span>
+                </div>
+
+                {/* Middle: Title */}
+                <div className="flex-1 flex items-center">
+                  <h3 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none" style={{ fontWeight: 200 }}>
                     흐름
                   </h3>
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 ease-out">
-                    <ArrowRight size={18} />
-                  </div>
                 </div>
-                <div>
-                  <p className="text-lg md:text-xl text-gray-400 group-hover:text-white transition-colors duration-500 font-medium break-keep">
+
+                {/* Bottom: Description */}
+                <div className="flex-none">
+                  <p className="text-xl md:text-2xl text-gray-400 group-hover:text-white transition-colors duration-500 font-medium break-keep leading-snug w-[95%]">
                     사용자의 목적과 제품의 구조가 일치하는 지점
                   </p>
                 </div>
@@ -344,29 +358,36 @@ function App() {
             </div>
 
             {/* Card 3 */}
-            <div className="group relative w-full aspect-[4/5] bg-[#1a1a1a] rounded-3xl overflow-hidden cursor-pointer border border-white/5">
+            <div className="group relative w-full aspect-[4/5] bg-[#1a1a1a] rounded-[2.5rem] overflow-hidden cursor-pointer border border-white/5">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1200&auto=format&fit=crop" 
-                  alt="맥락" 
-                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out" 
+                <img
+                  src="https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1200&auto=format&fit=crop"
+                  alt="맥락"
+                  className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
               </div>
-              
-              <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-between z-10 transition-transform duration-500 ease-out group-hover:translate-y-[-10px]">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-white transition-all duration-500">
+
+              <div className="absolute inset-0 p-8 md:p-10 lg:p-12 flex flex-col z-10 transition-transform duration-500 ease-out group-hover:-translate-y-2">
+                {/* Top: Number */}
+                <div className="flex-none">
+                  <span className="text-3xl md:text-4xl font-semibold tracking-tight text-white/80 group-hover:text-white transition-colors duration-500">
+                    (03)
+                  </span>
+                </div>
+
+                {/* Middle: Title */}
+                <div className="flex-1 flex items-center">
+                  <h3 className="text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none" style={{ fontWeight: 200 }}>
                     맥락
                   </h3>
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 ease-out">
-                    <ArrowRight size={18} />
-                  </div>
                 </div>
-                <div>
-                  <p className="text-lg md:text-xl text-gray-400 group-hover:text-white transition-colors duration-500 font-medium break-keep">
+
+                {/* Bottom: Description */}
+                <div className="flex-none">
+                  <p className="text-xl md:text-2xl text-gray-400 group-hover:text-white transition-colors duration-500 font-medium break-keep leading-snug w-[95%]">
                     화면이 아닌 제품 전체의 구조를 먼저 읽는 것
                   </p>
                 </div>
