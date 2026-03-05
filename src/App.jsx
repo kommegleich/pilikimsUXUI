@@ -74,7 +74,7 @@ import Navbar from './components/Navbar'; function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-24 px-4 2xl:px-8 w-full mx-auto">
           <div className="group cursor-pointer flex flex-col transition-transform duration-300">
             <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden relative bg-gray-200">
-              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2">
                 <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">UX Research</span>
                 <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">UI/UX Design</span>
               </div>
@@ -94,7 +94,7 @@ import Navbar from './components/Navbar'; function App() {
 
           <div className="group cursor-pointer flex flex-col transition-transform duration-300">
             <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden relative bg-gray-200">
-              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2">
                 <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">App Design</span>
                 <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">Prototyping</span>
               </div>
@@ -110,7 +110,7 @@ import Navbar from './components/Navbar'; function App() {
 
           <div className="group cursor-pointer flex flex-col transition-transform duration-300">
             <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden relative bg-gray-200">
-              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2">
                 <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">Design System</span>
                 <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">B2B</span>
               </div>
