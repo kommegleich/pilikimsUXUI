@@ -104,7 +104,7 @@ import Navbar from './components/Navbar'; function App() {
             </div>
             <div className="pt-8 pb-2 bg-[#f8f8f8] flex flex-col justify-center items-center text-center">
               <div className="text-xl sm:text-2xl lg:text-[1.75rem] leading-snug w-full mx-auto break-keep">
-                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black uppercase">E-Commerce App UX Improvement</h3>
+                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black font-en-sans uppercase">E-COMMERCE APP UX IMPROVEMENT</h3>
                 <span className="text-gray-500 font-medium inline ml-2 md:ml-3">— 서브타이틀 영역</span>
               </div>
             </div>
@@ -121,7 +121,7 @@ import Navbar from './components/Navbar'; function App() {
             </div>
             <div className="pt-8 pb-2 bg-[#f8f8f8] flex flex-col justify-center items-center text-center">
               <div className="text-xl sm:text-2xl lg:text-[1.75rem] leading-snug w-full mx-auto break-keep">
-                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black uppercase">B2B SaaS Dashboard Pattern</h3>
+                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black font-en-sans uppercase">B2B SAAS DASHBOARD PATTERN</h3>
                 <span className="text-gray-500 font-medium inline ml-2 md:ml-3">— 서브타이틀 영역</span>
               </div>
             </div>
@@ -130,9 +130,9 @@ import Navbar from './components/Navbar'; function App() {
           {/* Project 4 (Duplicate of 1) */}
           <div className="group cursor-pointer flex flex-col transition-transform duration-300">
             <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden relative bg-gray-200">
-              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2">
-                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">UX Research</span>
-                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">UI/UX Design</span>
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 font-en-sans uppercase">
+                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider">UX RESEARCH</span>
+                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider">UI/UX DESIGN</span>
               </div>
               <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center transform transition-transform duration-1000 group-hover:scale-105">Image Placeholder 4</span>
             </div>
@@ -147,15 +147,15 @@ import Navbar from './components/Navbar'; function App() {
           {/* Project 5 (Duplicate of 2) */}
           <div className="group cursor-pointer flex flex-col transition-transform duration-300">
             <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden relative bg-gray-200">
-              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2">
-                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">App Design</span>
-                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">Prototyping</span>
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 font-en-sans uppercase">
+                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider">APP DESIGN</span>
+                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider">PROTOTYPING</span>
               </div>
               <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center transform transition-transform duration-1000 group-hover:scale-105">Image Placeholder 5</span>
             </div>
             <div className="pt-8 pb-2 bg-[#f8f8f8] flex flex-col justify-center items-center text-center">
               <div className="text-xl sm:text-2xl lg:text-[1.75rem] leading-snug w-full mx-auto break-keep">
-                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black uppercase">E-Commerce App UX Improvement</h3>
+                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black font-en-sans uppercase">E-COMMERCE APP UX IMPROVEMENT</h3>
                 <span className="text-gray-500 font-medium inline ml-2 md:ml-3">— 서브타이틀 영역</span>
               </div>
             </div>
@@ -164,15 +164,15 @@ import Navbar from './components/Navbar'; function App() {
           {/* Project 6 (Duplicate of 3) */}
           <div className="group cursor-pointer flex flex-col transition-transform duration-300">
             <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden relative bg-gray-200">
-              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2">
-                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">Design System</span>
-                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider uppercase">B2B</span>
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 font-en-sans uppercase">
+                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider">DESIGN SYSTEM</span>
+                <span className="text-white outline-none rounded-full text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 font-bold bg-[#121212] tracking-wider">B2B</span>
               </div>
               <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center transform transition-transform duration-1000 group-hover:scale-105">Image Placeholder 6</span>
             </div>
             <div className="pt-8 pb-2 bg-[#f8f8f8] flex flex-col justify-center items-center text-center">
               <div className="text-xl sm:text-2xl lg:text-[1.75rem] leading-snug w-full mx-auto break-keep">
-                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black uppercase">B2B SaaS Dashboard Pattern</h3>
+                <h3 className="font-extrabold text-[#333333] tracking-tight inline transition-colors duration-300 group-hover:text-black font-en-sans uppercase">B2B SAAS DASHBOARD PATTERN</h3>
                 <span className="text-gray-500 font-medium inline ml-2 md:ml-3">— 서브타이틀 영역</span>
               </div>
             </div>

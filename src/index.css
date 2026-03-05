@@ -16,3 +16,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.font-en-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-en-serif {
+  font-family: 'Playfair Display', serif;
+}
