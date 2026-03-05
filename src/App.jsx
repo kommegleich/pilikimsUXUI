@@ -316,9 +316,9 @@ function App() {
                 {/* Bottom: Description Area (Crossfade logic) */}
                 <div className="flex-none relative h-32 md:h-40">
                   {/* Default State */}
-                  <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-                    <p className="text-lg md:text-xl text-gray-500 font-medium break-keep leading-snug w-[95%]">
-                      첫 진입부터 다음 행동이 보이는 구조
+                  <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end pb-2">
+                    <p className="text-xl md:text-2xl text-gray-500 font-medium break-keep leading-snug w-full">
+                      직관 : 첫 진입부터 다음 행동이 보이는 구조
                     </p>
                   </div>
                   {/* Hover State */}
@@ -367,9 +367,9 @@ function App() {
                 {/* Bottom: Description Area (Crossfade logic) */}
                 <div className="flex-none relative h-32 md:h-40">
                   {/* Default State */}
-                  <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-                    <p className="text-lg md:text-xl text-white/70 font-medium break-keep leading-snug w-[95%]">
-                      사용자의 목적과 제품의 구조가 일치하는 지점
+                  <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end pb-2">
+                    <p className="text-xl md:text-2xl text-white/70 font-medium break-keep leading-snug w-full">
+                      흐름 : 사용자의 목적과 제품의 구조가 일치하는 지점
                     </p>
                   </div>
                   {/* Hover State */}
@@ -417,9 +417,9 @@ function App() {
                 {/* Bottom: Description Area (Crossfade logic) */}
                 <div className="flex-none relative h-32 md:h-40">
                   {/* Default State */}
-                  <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-                    <p className="text-lg md:text-xl text-gray-400 font-medium break-keep leading-snug w-[95%]">
-                      화면이 아닌 제품 전체의 구조를 먼저 읽는 것
+                  <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end pb-2">
+                    <p className="text-xl md:text-2xl text-gray-400 font-medium break-keep leading-snug w-full">
+                      맥락 : 화면이 아닌 제품 전체의 구조를 먼저 읽는 것
                     </p>
                   </div>
                   {/* Hover State */}
