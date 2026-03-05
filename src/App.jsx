@@ -67,66 +67,65 @@ import Navbar from './components/Navbar'; function App() {
       </section>
 
       {/* Projects Section (Vertical List) */}
-      <section id="projects" className="w-full bg-[#f8f8f8] py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-black tracking-tight">Projects</h2>
+      {/* Projects Section (3-Column Grid) */}
+      <section id="projects" className="w-full bg-[#f8f8f8] pt-24 pb-0">
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-black tracking-tight px-6 lg:px-8">Projects</h2>
 
-          <div className="flex flex-col gap-24">
-            {/* Project 1 */}
-            <div className="group cursor-pointer flex flex-col gap-6 pt-12">
-              <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden flex items-end justify-end relative bg-gray-200">
-                <img
-                  src={`${import.meta.env.BASE_URL}project1_v3.png`}
-                  alt="골프장 통합 ERP시스템"
-                  className="w-11/12 md:w-4/5 h-auto object-cover object-right-bottom transform transition-transform duration-700 group-hover:scale-105 origin-bottom-right"
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
+          {/* Project 1 */}
+          <div className="group cursor-pointer flex flex-col border border-gray-200/60 transition-transform duration-300">
+            <div className="w-full aspect-[4/4] lg:aspect-[3/4] overflow-hidden relative bg-gray-200">
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">UX Research</span>
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">UI/UX Design</span>
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">2023.03 ~ 2024.05</span>
               </div>
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-2">
-                <div>
-                  <p className="text-gray-500 font-medium text-sm md:text-base mb-2">골프장 관리의 새로운 기준, 골프장 시작에서부터 끝의 모든 프로세스를 한번에!</p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-black transition-colors duration-300">골프장 통합 ERP시스템</h3>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">UX Research</span>
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">UI/UX Design</span>
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">2023.03 ~ 2024.05</span>
-                  </div>
-                </div>
+              <img
+                src={`${import.meta.env.BASE_URL}project1_v3.png`}
+                alt="골프장 통합 ERP시스템"
+                className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
+              />
+            </div>
+            <div className="py-6 px-6 lg:px-8 bg-white h-full flex flex-col justify-start">
+              <div className="text-xl md:text-2xl leading-snug">
+                <h3 className="font-bold text-black inline transition-colors duration-300">골프장 통합 ERP시스템</h3>
+                <span className="text-gray-500 font-normal inline ml-2">— 골프장 관리의 새로운 기준, 골프장 시작에서부터 끝의 모든 프로세스를 한번에!</span>
               </div>
             </div>
+          </div>
 
-            {/* Project 2 */}
-            <div className="group cursor-pointer flex flex-col gap-6 border-t border-gray-300 pt-12">
-              <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden flex items-end justify-end relative bg-gray-200">
-                <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center">Image Placeholder 2</span>
+          {/* Project 2 */}
+          <div className="group cursor-pointer flex flex-col border border-gray-200/60 transition-transform duration-300">
+            <div className="w-full aspect-[4/4] lg:aspect-[3/4] overflow-hidden relative bg-gray-200">
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">App Design</span>
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">Prototyping</span>
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">2023. 08. 22</span>
               </div>
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-2">
-                <div>
-                  <p className="text-gray-500 font-medium text-sm md:text-base mb-2">서브타이틀 영역</p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-black transition-colors duration-300">E-Commerce App UX Improvement</h3>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">App Design</span>
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">Prototyping</span>
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">2023. 08. 22</span>
-                  </div>
-                </div>
+              <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center transform transition-transform duration-1000 group-hover:scale-105">Image Placeholder 2</span>
+            </div>
+            <div className="py-6 px-6 lg:px-8 bg-white h-full flex flex-col justify-start">
+              <div className="text-xl md:text-2xl leading-snug">
+                <h3 className="font-bold text-black inline transition-colors duration-300">E-Commerce App UX Improvement</h3>
+                <span className="text-gray-500 font-normal inline ml-2">— 서브타이틀 영역</span>
               </div>
             </div>
+          </div>
 
-            {/* Project 3 */}
-            <div className="group cursor-pointer flex flex-col gap-6 border-t border-gray-300 pt-12">
-              <div className="w-full aspect-[21/9] rounded-2xl overflow-hidden flex items-end justify-end relative bg-gray-200">
-                <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center">Image Placeholder 3</span>
+          {/* Project 3 */}
+          <div className="group cursor-pointer flex flex-col border border-gray-200/60 transition-transform duration-300">
+            <div className="w-full aspect-[4/4] lg:aspect-[3/4] overflow-hidden relative bg-gray-200">
+              <div className="absolute top-6 left-6 z-10 flex flex-wrap gap-2 transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">Design System</span>
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">B2B</span>
+                <span className="border border-black/10 text-black outline-none rounded-full text-xs px-4 py-1.5 font-bold bg-white/80 backdrop-blur-md shadow-sm">2023. 04. 05</span>
               </div>
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-2">
-                <div>
-                  <p className="text-gray-500 font-medium text-sm md:text-base mb-2">서브타이틀 영역</p>
-                  <h3 className="text-3xl md:text-4xl font-bold text-black transition-colors duration-300">B2B SaaS Dashboard Pattern</h3>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">Design System</span>
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">B2B</span>
-                    <span className="border border-gray-300 text-gray-600 rounded-full text-xs md:text-sm px-3 md:px-4 py-1.5 font-medium">2023. 04. 05</span>
-                  </div>
-                </div>
+              <span className="text-gray-400 font-medium absolute inset-0 flex items-center justify-center transform transition-transform duration-1000 group-hover:scale-105">Image Placeholder 3</span>
+            </div>
+            <div className="py-6 px-6 lg:px-8 bg-white h-full flex flex-col justify-start">
+              <div className="text-xl md:text-2xl leading-snug">
+                <h3 className="font-bold text-black inline transition-colors duration-300">B2B SaaS Dashboard Pattern</h3>
+                <span className="text-gray-500 font-normal inline ml-2">— 서브타이틀 영역</span>
               </div>
             </div>
           </div>
