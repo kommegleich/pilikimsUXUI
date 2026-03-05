@@ -284,7 +284,7 @@ function App() {
         <div className="w-full max-w-[1800px] mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <div className="group relative w-full aspect-[4/5] bg-[#ffffff] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
+            <div className="group relative w-full aspect-[3/5] bg-[#ffffff] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
@@ -306,8 +306,8 @@ function App() {
 
                 {/* Middle: Title */}
                 <div className="flex-1 flex items-center">
-                  <h3 className="text-[4rem] md:text-[5rem] lg:text-[6rem] font-extralight tracking-tighter text-[#121212] group-hover:text-white transition-all duration-500 leading-none" style={{ fontWeight: 200 }}>
-                    intuition
+                  <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-[#121212] group-hover:text-white transition-all duration-500 leading-none normal-case" style={{ fontWeight: 200 }}>
+                    Intuition
                   </h3>
                 </div>
 
@@ -321,7 +321,7 @@ function App() {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative w-full aspect-[4/5] bg-[#d9331d] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
+            <div className="group relative w-full aspect-[3/5] bg-[#d9331d] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
@@ -343,7 +343,7 @@ function App() {
 
                 {/* Middle: Title */}
                 <div className="flex-1 flex items-center">
-                  <h3 className="text-[4rem] md:text-[5rem] lg:text-[6rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none" style={{ fontWeight: 200 }}>
+                  <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none normal-case" style={{ fontWeight: 200 }}>
                     flow
                   </h3>
                 </div>
@@ -358,7 +358,7 @@ function App() {
             </div>
 
             {/* Card 3 */}
-            <div className="group relative w-full aspect-[4/5] bg-[#1b1b1b] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
+            <div className="group relative w-full aspect-[3/5] bg-[#1b1b1b] rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.03] transition-transform duration-500 ease-out">
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
@@ -380,7 +380,7 @@ function App() {
 
                 {/* Middle: Title */}
                 <div className="flex-1 flex items-center">
-                  <h3 className="text-[4rem] md:text-[5rem] lg:text-[6rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none" style={{ fontWeight: 200 }}>
+                  <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-500 leading-none normal-case" style={{ fontWeight: 200 }}>
                     context
                   </h3>
                 </div>
