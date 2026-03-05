@@ -318,7 +318,7 @@ function App() {
                   {/* Default State */}
                   <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end pb-2">
                     <div className="flex flex-col gap-1 w-full">
-                      <span className="text-2xl md:text-3xl text-gray-500 font-bold tracking-tight">직관</span>
+                      <span className="text-xl md:text-2xl text-gray-500 font-normal tracking-tight">직관</span>
                       <p className="text-xl md:text-2xl text-gray-400 font-normal break-keep leading-snug">
                         첫 진입부터 다음 행동이 보이는 구조
                       </p>
@@ -372,7 +372,7 @@ function App() {
                   {/* Default State */}
                   <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end pb-2">
                     <div className="flex flex-col gap-1 w-full">
-                      <span className="text-2xl md:text-3xl text-white/90 font-bold tracking-tight">흐름</span>
+                      <span className="text-xl md:text-2xl text-white/90 font-normal tracking-tight">흐름</span>
                       <p className="text-xl md:text-2xl text-white/70 font-normal break-keep leading-snug">
                         사용자의 목적과 제품의 구조가 일치하는 지점
                       </p>
@@ -425,7 +425,7 @@ function App() {
                   {/* Default State */}
                   <div className="absolute inset-0 opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex flex-col justify-end pb-2">
                     <div className="flex flex-col gap-1 w-full">
-                      <span className="text-2xl md:text-3xl text-white/90 font-bold tracking-tight">맥락</span>
+                      <span className="text-xl md:text-2xl text-white/90 font-normal tracking-tight">맥락</span>
                       <p className="text-xl md:text-2xl text-gray-400 font-normal break-keep leading-snug">
                         화면이 아닌 제품 전체의 구조를 먼저 읽는 것
                       </p>
