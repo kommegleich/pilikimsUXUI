@@ -288,8 +288,8 @@ function App() {
               {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                 <img
-                  src="/assets/profile.jpg"
-                  alt="Pulip Kim"
+                  src="/pilikimsUXUI/assets/profile.jpg"
+                  alt="pulip kim"
                   className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
@@ -314,8 +314,8 @@ function App() {
                   </div>
                   {/* Hover State */}
                   <div className="absolute inset-0 flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-bold tracking-tighter text-white leading-none normal-case">
-                      Pulip Kim
+                    <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white leading-none normal-case">
+                      pulip kim
                     </h3>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ function App() {
                   </div>
                   {/* Hover State */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex items-end pb-2">
-                    <p className="text-lg md:text-xl text-gray-200 font-medium break-keep leading-snug w-[95%]">
+                    <p className="text-lg md:text-xl text-gray-200 font-normal break-keep leading-snug w-[95%]">
                       arbeiterinpilita@gmail.com
                     </p>
                   </div>
