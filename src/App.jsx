@@ -290,7 +290,7 @@ function App() {
                 <img
                   src="/pilikimsUXUI/assets/profile.jpg"
                   alt="pulip kim"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-[1.02] border-none outline-none"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
@@ -342,7 +342,7 @@ function App() {
                 <img
                   src="/pilikimsUXUI/assets/card2_hover.jpg"
                   alt="flow"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-[1.02] border-none outline-none"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
@@ -356,11 +356,14 @@ function App() {
                   </span>
                 </div>
 
-                {/* Middle: Title */}
-                <div className="flex-1 flex items-center">
-                  <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-white group-hover:text-white transition-all duration-300 leading-none normal-case" style={{ fontWeight: 200 }}>
-                    Flow
-                  </h3>
+                {/* Middle: Title Area (Crossfade logic) */}
+                <div className="flex-1 flex items-center relative">
+                  {/* Default State */}
+                  <div className="absolute inset-0 flex items-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                    <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extralight tracking-tighter text-white leading-none normal-case" style={{ fontWeight: 200 }}>
+                      Flow
+                    </h3>
+                  </div>
                 </div>
 
                 {/* Bottom: Description Area (Crossfade logic) */}
@@ -374,7 +377,7 @@ function App() {
                   {/* Hover State */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 flex flex-col justify-end pb-2">
                     <a href="#projects" className="flex items-center gap-2 group/link cursor-pointer w-fit">
-                      <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white uppercase leading-none">
+                      <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white uppercase leading-none group-hover/link:underline underline-offset-[6px] decoration-1">
                         MORE WORKS
                       </h3>
                       <svg className="w-8 h-8 md:w-10 md:h-10 text-white transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -393,7 +396,7 @@ function App() {
                 <img
                   src="/pilikimsUXUI/assets/card3_hover.jpg"
                   alt="context"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-[1.02] border-none outline-none"
                 />
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
@@ -428,7 +431,7 @@ function App() {
                   {/* Hover State */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 flex flex-col justify-end gap-2 pb-2">
                     <a href="mailto:arbeiterinpilita@gmail.com" className="flex items-center gap-2 group/link cursor-pointer w-fit">
-                      <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white uppercase leading-none">
+                      <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white uppercase leading-none group-hover/link:underline underline-offset-[6px] decoration-1">
                         CONTACT
                       </h3>
                       <svg className="w-8 h-8 md:w-10 md:h-10 text-white transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -436,7 +439,7 @@ function App() {
                       </svg>
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link2 cursor-pointer w-fit">
-                      <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white uppercase leading-none">
+                      <h3 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-normal tracking-tighter text-white uppercase leading-none group-hover/link2:underline underline-offset-[6px] decoration-1">
                         LINKEDIN
                       </h3>
                       <svg className="w-8 h-8 md:w-10 md:h-10 text-white transform group-hover/link2:translate-x-1 group-hover/link2:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
