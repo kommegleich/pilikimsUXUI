@@ -8,28 +8,40 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Inter', 'Roboto', sans-serif;
-  text-transform: uppercase;
-  background-color: #fff;
-  color: #121212;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.font-en-sans {
-  font-family: 'Inter', sans-serif;
-}
-
 .font-en-serif {
   font-family: 'Playfair Display', serif;
 }
 
-.font-montserrat {
-  font-family: 'Montserrat', sans-serif;
+.font-serif-en {
+  font-family: 'Playfair Display', serif;
 }
 
-.font-helvetica {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@keyframes custom-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-custom-marquee {
+  animation: custom-marquee 10s linear infinite;
+}
+
+.font-pretendard {
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+
+body {
+  font-family: 'Inter', 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #121212;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

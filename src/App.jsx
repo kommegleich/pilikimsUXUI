@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar'; function App() {
+import Navbar from './components/Navbar';
+import { ArrowRight } from 'lucide-react';
+function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -17,7 +19,7 @@ import Navbar from './components/Navbar'; function App() {
   }, []);
 
   return (
-    <div className="relative w-full bg-white font-['Pretendard'] selection:bg-black selection:text-white">
+    <div className="relative w-full bg-white selection:bg-black selection:text-white">
       <Navbar />
 
       {/* Hero Section (Light) */}
@@ -30,20 +32,29 @@ import Navbar from './components/Navbar'; function App() {
         >
           {/* Centered Text */}
           <motion.div
-            className="text-8xl md:text-[10rem] lg:text-[14rem] font-helvetica font-black tracking-tighter cursor-default text-[#121212] mb-8 leading-none"
+            className="text-8xl md:text-[10rem] lg:text-[14rem] font-black tracking-tighter cursor-default text-[#121212] mb-8 leading-none"
             initial={{ opacity: 0, y: 15 }}
             animate={{
               opacity: 1,
               y: 0,
-              scale: isHovering ? 1.05 : 1
+              scale: isHovering ? 1.25 : 1,
+              rotateX: isHovering && typeof window !== 'undefined' ? (mousePosition.y / window.innerHeight - 0.5) * -90 : 0,
+              rotateY: isHovering && typeof window !== 'undefined' ? (mousePosition.x / window.innerWidth - 0.5) * 90 : 0
+            }}
+            style={{
+              transformPerspective: 500,
+              transformStyle: "preserve-3d"
             }}
             transition={{
               opacity: { duration: 0.8, ease: "easeOut" },
               y: { duration: 0.8, ease: "easeOut" },
-              scale: { duration: 0.4, ease: "easeOut" }
+              scale: { duration: 3, ease: [0.16, 1, 0.3, 1] }, // Very smooth, slow scale up
+              rotateX: { type: "spring", stiffness: 80, damping: 20 },
+              rotateY: { type: "spring", stiffness: 80, damping: 20 }
             }}
           >
             PLK
+
           </motion.div>
 
           {/* Subtitle */}
@@ -68,78 +79,100 @@ import Navbar from './components/Navbar'; function App() {
 
 
       {/* Projects Section (Posterco Style) */}
-      <section id="projects" className="w-full bg-black pt-32 pb-32 text-white">
-        <div className="w-full px-4 md:px-8 mb-12">
-          <h2 className="text-4xl md:text-6xl lg:text-8xl font-helvetica font-black tracking-tighter px-2 hover:text-gray-300 transition-colors">PROJECTS.</h2>
+      <section id="projects" className="w-full bg-[#0d0d0d] pt-64 pb-96 text-white">
+        <div className="w-full px-4 md:px-8 mb-24 flex justify-center">
+          <h2 className="text-8xl md:text-[10rem] lg:text-[14rem] font-black tracking-tighter leading-tight px-2 hover:text-gray-300 transition-colors text-center">PROJECTS.</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-0">
+        <div className="flex flex-col w-full border-t border-gray-800">
+          {[
+            {
+              title: "골프장 통합관리 시스템",
+              desc: "골퍼의 입장부터 결제, 퇴장까지의 전 과정을 아우르며,\n파편화된 기존 관리 시스템의 UI를 표준화하여 실무자의 업무 효율을 극대화한 골프장 B2B 통합 ERP 시스템 설계 프로젝트",
+              tags: ["UX 설계", "Design System 구축", "UI 화면설계", "2023.03~2025.05"],
+              bgClass: "hover:bg-gradient-to-r hover:from-[#457FF3] hover:to-[#10182B]"
+            },
+            {
+              title: "ARMATURE GOLF LEAGUE (SAGL)",
+              desc: "스마트스코어 앱 내에서 누구나 손쉽게 대회에 참여할 수 있도록, \n복잡한 참가 신청의 진입 장벽을 낮추고 직관적인 흐름으로 개선한 아마추어 골프 리그 선수 등록 UX/UI 고도화 프로젝트",
+              tags: ["UX 설계", "UI 화면설계", "2023.01~2023.03"],
+              bgClass: "hover:bg-gradient-to-r hover:from-[#2D343A] hover:to-[#09122A]"
+            },
+            {
+              title: "스코어를 게이밍하다",
+              desc: "단순한 점수 기록을 넘어 방대한 스코어 데이터를 기반으로 유저의 플레이 패턴을 분석하고 감성적인 스토리로 풀어낸, \n스마트스코어 프리미엄 멤버십 전용 초개인화 리포트 서비스",
+              tags: ["UX 설계", "UI 화면설계", "약 2개월"],
+              bgClass: "hover:bg-gradient-to-r hover:from-[#00FF37] hover:to-[#FF00FB]"
+            },
+            {
+              title: "골프와 선물하기 연계서비스",
+              desc: "관계 기반의 리마인드 알림과 맞춤형 큐레이션을 통해 유저 간 소셜 네트워킹을 활성화하고, \n구매 프로세스를 단축해 전환율을 극대화한 골프 앱 내 커머스(선물하기) UX 전략 및 설계",
+              tags: ["UX 설계", "UI 화면설계", "약 4개월"],
+              bgClass: "hover:bg-gradient-to-r hover:from-[#F43DE5] hover:to-[#9F2152]"
+            },
+            {
+              title: "충전결제 서비스 PAYIS",
+              desc: "번거로운 카드 등록 절차 없이 필요한 만큼만 충전하여 사용하는 방식을 채택해, \n개인정보 보호와 직관적인 결제 경험을 동시에 확보한 선불형 간편 결제 앱(App) 구축 프로젝트",
+              tags: ["UX 설계", "UI 화면설계", "약 6개월"],
+              bgClass: "hover:bg-gradient-to-r hover:from-[#0073FF] hover:to-[#263044]"
+            },
+            {
+              title: "TALKAK 랜덤 사진전송 서비스",
+              desc: "'찍고, 보내고, 받는다'는 3단계의 핵심 행동에만 집중하여, \n복잡한 기능 없이 전 세계 사람들과 가볍고 유쾌하게 일상을 공유할 수 있는 심플한 랜덤 사진 공유 소셜 서비스",
+              tags: ["UX 설계", "UI 화면설계", "약 6개월"],
+              bgClass: "hover:bg-gradient-to-r hover:from-[#FD723B] hover:to-[#F26027]"
+            }
+          ].map((project, index) => (
+            <a
+              key={index}
+              href="#"
+              className={`group flex flex-col md:flex-row items-center justify-between py-12 md:py-16 px-4 md:px-8 border-b border-gray-800 transition-all duration-500 overflow-hidden ${project.bgClass}`}
+            >
+              {/* Default Title */}
+              <h3 className="text-[clamp(2.5rem,6vw,5rem)] leading-[1] font-pretendard font-black tracking-tighter text-white break-words w-full md:w-5/12 mb-4 md:mb-0 group-hover:hidden transition-colors">
+                {project.title}
+              </h3>
 
-          {/* Project 1 */}
-          <a href="#" className="group block cursor-pointer relative overflow-hidden rounded-[2.5rem] bg-[#121212]">
-            <div className="w-full aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 translate-y-8 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-10 w-full">
-                <h3 className="text-[clamp(3rem,12vw,5.5rem)] md:text-[clamp(4rem,7vw,10.5rem)] leading-[0.85] font-black font-helvetica tracking-tighter mb-4 uppercase text-white drop-shadow-md break-words">Smartscore ERP</h3>
-                <p className="text-gray-300 font-normal tracking-wide text-base md:text-lg drop-shadow-sm break-keep">골퍼가 입장해서 결제하고 나갈 때까지의 모든 서비스를 관리 제공하는 솔루션서비스와, 이를 지원하는 회원·매출·코스 관리 등 방대한 운영 업무(B2B)를 하나로 통합한 솔루션</p>
+              {/* Marquee Title (Visible on Hover) */}
+              <div className="hidden group-hover:flex overflow-hidden w-full md:w-5/12 mb-4 md:mb-0 mr-0 md:mr-8 items-center h-full">
+                <div className="flex w-max animate-custom-marquee">
+                  <div className="flex shrink-0">
+                    {[...Array(2)].map((_, i) => (
+                      <h3 key={i} className="text-[clamp(2.5rem,6vw,5rem)] leading-[1] font-pretendard font-black tracking-tighter text-white/90 pr-12 shrink-0">
+                        {project.title}
+                      </h3>
+                    ))}
+                  </div>
+                  <div className="flex shrink-0">
+                    {[...Array(2)].map((_, i) => (
+                      <h3 key={i + 2} className="text-[clamp(2.5rem,6vw,5rem)] leading-[1] font-pretendard font-black tracking-tighter text-white/90 pr-12 shrink-0">
+                        {project.title}
+                      </h3>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </a>
 
-          {/* Project 2 */}
-          <a href="#" className="group block cursor-pointer relative overflow-hidden rounded-[2.5rem] bg-[#121212]">
-            <div className="w-full aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 translate-y-8 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-10 w-full">
-                <h3 className="text-[clamp(3rem,12vw,5.5rem)] md:text-[clamp(4rem,7vw,10.5rem)] leading-[0.85] font-black font-helvetica tracking-tighter mb-4 uppercase text-white drop-shadow-md break-words">Smartscore Armature Golf League</h3>
-                <p className="text-gray-300 font-normal tracking-wide text-base md:text-lg drop-shadow-sm break-keep">스마트스코어 앱에서 참가 가능한 아마추어 골프리그</p>
+              {/* Subtitle & Chips */}
+              <div className="w-full md:w-1/2 flex flex-row items-center justify-between">
+                <div className="flex flex-col w-full">
+                  <p className="text-gray-500 font-pretendard font-normal tracking-tight text-base md:text-lg lg:text-xl break-keep whitespace-pre-line group-hover:text-white transition-colors">
+                    {project.desc}
+                  </p>
+
+                  {/* Hover Chips */}
+                  {project.tags && project.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-0 max-h-0 opacity-0 overflow-hidden group-hover:mt-6 group-hover:max-h-24 group-hover:opacity-100 transition-all duration-500 ease-out">
+                      {project.tags.map((tag, i) => (
+                        <span key={i} className="text-xs md:text-sm font-pretendard text-white border border-white/20 bg-black/10 backdrop-blur-md px-3 py-1.5 whitespace-nowrap">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          </a>
-
-          {/* Project 3 */}
-          <a href="#" className="group block cursor-pointer relative overflow-hidden rounded-[2.5rem] bg-[#121212]">
-            <div className="w-full aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 translate-y-8 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-10 w-full">
-                <h3 className="text-[clamp(3rem,12vw,5.5rem)] md:text-[clamp(4rem,7vw,10.5rem)] leading-[0.85] font-black font-helvetica tracking-tighter mb-4 uppercase text-white drop-shadow-md break-words">Design System</h3>
-                <p className="text-gray-300 font-normal tracking-wide text-base md:text-lg drop-shadow-sm break-keep">B2B SAAS DASHBOARD PATTERN</p>
-              </div>
-            </div>
-          </a>
-
-          {/* Project 4 */}
-          <a href="#" className="group block cursor-pointer relative overflow-hidden rounded-[2.5rem] bg-[#121212]">
-            <div className="w-full aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 translate-y-8 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-10 w-full">
-                <h3 className="text-[clamp(3rem,12vw,5.5rem)] md:text-[clamp(4rem,7vw,10.5rem)] leading-[0.85] font-black font-helvetica tracking-tighter mb-4 uppercase text-white drop-shadow-md break-words">UX Research & Design</h3>
-                <p className="text-gray-300 font-normal tracking-wide text-base md:text-lg drop-shadow-sm break-keep">골프장 통합 ERP시스템</p>
-              </div>
-            </div>
-          </a>
-
-          {/* Project 5 */}
-          <a href="#" className="group block cursor-pointer relative overflow-hidden rounded-[2.5rem] bg-[#121212]">
-            <div className="w-full aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 translate-y-8 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-10 w-full">
-                <h3 className="text-[clamp(3rem,12vw,5.5rem)] md:text-[clamp(4rem,7vw,10.5rem)] leading-[0.85] font-black font-helvetica tracking-tighter mb-4 uppercase text-white drop-shadow-md break-words">App Design</h3>
-                <p className="text-gray-300 font-normal tracking-wide text-base md:text-lg drop-shadow-sm break-keep">E-COMMERCE APP UX IMPROVEMENT</p>
-              </div>
-            </div>
-          </a>
-
-          {/* Project 6 */}
-          <a href="#" className="group block cursor-pointer relative overflow-hidden rounded-[2.5rem] bg-[#121212]">
-            <div className="w-full aspect-[4/3] relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-12 translate-y-8 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-10 w-full">
-                <h3 className="text-[clamp(3rem,12vw,5.5rem)] md:text-[clamp(4rem,7vw,10.5rem)] leading-[0.85] font-black font-helvetica tracking-tighter mb-4 uppercase text-white drop-shadow-md break-words">Design System</h3>
-                <p className="text-gray-300 font-normal tracking-wide text-base md:text-lg drop-shadow-sm break-keep">B2B SAAS DASHBOARD PATTERN</p>
-              </div>
-            </div>
-          </a>
-
+            </a>
+          ))}
         </div>
       </section>
 
@@ -164,8 +197,145 @@ import Navbar from './components/Navbar'; function App() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Expertise Section */}
+      <section id="expertise" className="w-full min-h-screen flex flex-col justify-center bg-[#fff] pt-32 pb-64 text-[#121212]">
+        <div className="w-full px-4 md:px-8 mb-24 flex justify-center">
+          <h2 className="text-8xl md:text-[10rem] lg:text-[14rem] font-black tracking-tighter leading-tight px-2 hover:text-gray-600 transition-colors text-center">EXPERTISE.</h2>
+        </div>
+
+        <div className="w-full max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between gap-16 md:gap-8 mt-20">
+          {/* Figma Column */}
+          <div className="flex flex-col flex-1 max-w-sm">
+            <div className="mb-6">
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 border border-gray-200 px-2 py-1 rounded">Design Tool</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <div className="w-20 h-20 bg-[#F2F2F2] rounded-2xl flex items-center justify-center p-5 shrink-0">
+                <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[30px] h-full object-contain">
+                  <path d="M19 28.5C19 23.25 14.75 19 9.5 19C4.25 19 0 23.25 0 28.5C0 33.75 4.25 38 9.5 38C14.75 38 19 33.75 19 28.5Z" fill="#1ABCFE" />
+                  <path d="M0 9.5C0 4.25 4.25 0 9.5 0H19V19H9.5C4.25 19 0 14.75 0 9.5Z" fill="#F24E1E" />
+                  <path d="M19 0H28.5C33.75 0 38 4.25 38 9.5C38 14.75 33.75 19 28.5 19H19V0Z" fill="#FF7262" />
+                  <path d="M19 19H28.5C33.75 19 38 23.25 38 28.5C38 33.75 33.75 38 28.5 38H19V19Z" fill="#A259FF" />
+                  <path d="M0 47.5C0 42.25 4.25 38 9.5 38H19V47.5C19 52.75 14.75 57 9.5 57C4.25 57 0 52.75 0 47.5Z" fill="#0AC170" />
+                </svg>
+              </div>
+              <div className="flex flex-col flex-1 overflow-hidden h-[4rem] md:h-[5rem]">
+                <h3 className="text-4xl md:text-5xl font-black tracking-tight leading-none mb-2">Figma</h3>
+                <RollingSkills skills={["UI Design", "Prototyping", "Design System", "Collaboration"]} color="text-gray-400" />
+              </div>
+            </div>
+          </div>
+
+          {/* Adobe Column */}
+          <div className="flex flex-col flex-1 max-w-sm">
+            <div className="mb-6">
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 border border-gray-200 px-2 py-1 rounded">Creative Cloud</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <div className="w-20 h-20 bg-[#FF0000] rounded-2xl flex items-center justify-center p-5 shrink-0 shadow-lg shadow-red-100">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" className="w-[30px] h-full object-contain">
+                  <path d="M14.653 3H21v17.402l-6.347-17.402zm-5.306 0H3v17.402L9.347 3zM12 10.367l4.184 10.035h-3.265l-1.429-3.714H8.714L7.286 20.402H4L12 10.367z" />
+                </svg>
+              </div>
+              <div className="flex flex-col flex-1 overflow-hidden h-[4rem] md:h-[5rem]">
+                <h3 className="text-4xl md:text-5xl font-black tracking-tight leading-none mb-2">Adobe</h3>
+                <RollingSkills skills={["Photoshop", "Illustrator", "After Effects", "Premiere Pro"]} color="text-gray-400" />
+              </div>
+            </div>
+          </div>
+
+          {/* Development Column */}
+          <div className="flex flex-col flex-1 max-w-sm">
+            <div className="mb-6">
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 border border-gray-200 px-2 py-1 rounded">Tech Stack</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <div className="w-20 h-20 bg-[#2D2D2D] rounded-2xl flex items-center justify-center p-3.5 shrink-0">
+                <div className="flex gap-0.5 max-w-full justify-center">
+                  <svg viewBox="0 0 24 24" fill="#E34F26" xmlns="http://www.w3.org/2000/svg" className="w-[22px] h-[22px]">
+                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="#1572B6" xmlns="http://www.w3.org/2000/svg" className="w-[22px] h-[22px]">
+                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex flex-col flex-1 overflow-hidden h-[4rem] md:h-[5rem]">
+                <h3 className="text-4xl md:text-5xl font-black tracking-tight leading-none mb-2">Dev</h3>
+                <RollingSkills skills={["HTML5", "CSS3 / Tailwind", "React.js", "JavaScript"]} color="text-gray-400" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Profile Section (Inspired by andreebel.de "Jetzt starten") */}
+      <section id="profile" className="w-full bg-[#121212] flex justify-center py-32 md:py-48 px-4 md:px-8 text-white relative">
+        <div className="w-full max-w-[1400px] flex flex-col md:flex-row gap-16 md:gap-32 items-start justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex-1"
+          >
+            <h2 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-8 md:mb-0">
+              PROFILE.
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="flex-1 flex flex-col gap-12"
+          >
+            <p className="text-xl md:text-3xl text-gray-300 font-medium leading-[1.6] tracking-tight">
+              아이디어가 현실이 되기까지 모든 과정에 깊게 관여하며, 유연한 소통을 기반으로 창의적인 솔루션을 만들어갑니다. 단순한 디자인을 넘어 사용자의 삶에 맞닿는 경험을 제공하기 위해 고민합니다. 준비가 되셨다면, 언제든 이야기 나눠보고 싶습니다.
+            </p>
+
+            <div className="pt-4">
+              <a href="#contact" className="inline-flex items-center justify-between gap-6 px-8 py-5 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 group w-full md:w-auto min-w-[280px]">
+                <span className="text-xl font-bold tracking-tight">Get in Touch</span>
+                <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
     </div>
   )
+}
+
+function RollingSkills({ skills, color }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % skills.length);
+    }, 2500);
+    return () => clearInterval(timer);
+  }, [skills.length]);
+
+  return (
+    <div className="relative h-6 md:h-8 overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.p
+          key={index}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -20, opacity: 0 }}
+          transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
+          className={`${color} text-lg md:text-xl font-medium tracking-tight whitespace-nowrap`}
+        >
+          {skills[index]}
+        </motion.p>
+      </AnimatePresence>
+    </div>
+  );
 }
 
 export default App;
