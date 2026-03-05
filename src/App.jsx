@@ -68,8 +68,8 @@ import Navbar from './components/Navbar'; function App() {
 
       {/* Projects Section (Vertical List) */}
       {/* Projects Section (3-Column Grid) */}
-      <section id="projects" className="w-full bg-[#f8f8f8] pt-32 pb-16">
-        <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black mb-24 text-black tracking-tighter text-center leading-none">Projects</h2>
+      <section id="projects" className="w-full bg-[#f8f8f8] pt-48 pb-32">
+        <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-montserrat font-black mb-32 text-black tracking-tighter text-center leading-none">PROJECTS</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-24 px-4 2xl:px-8 w-full mx-auto">
           {/* Project 1 */}
@@ -183,7 +183,7 @@ import Navbar from './components/Navbar'; function App() {
       {/* Expertise Section */}
       <section id="expertise" className="w-full bg-white py-24 pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-black tracking-tight">Expertise</h2>
+          <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-16 text-black tracking-tight">EXPERTISE</h2>
 
           {/* Split Content Area */}
           <div className="border-t border-gray-300 py-12 flex flex-col md:flex-row gap-8 md:gap-24">
