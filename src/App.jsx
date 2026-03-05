@@ -364,7 +364,7 @@ function App() {
                 </div>
 
                 {/* Bottom: Description */}
-                <div className="flex-none">
+                <div className="flex-none h-32 md:h-40">
                   <p className="text-lg md:text-xl text-white/70 group-hover:text-white transition-colors duration-500 font-medium break-keep leading-snug w-[95%]">
                     사용자의 목적과 제품의 구조가 일치하는 지점
                   </p>
