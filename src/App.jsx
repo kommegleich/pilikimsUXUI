@@ -69,7 +69,7 @@ import Navbar from './components/Navbar'; function App() {
       {/* Projects Section (Vertical List) */}
       {/* Projects Section (3-Column Grid) */}
       <section id="projects" className="w-full bg-[#f8f8f8] pt-32 pb-16">
-        <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-bold mb-24 text-black tracking-tighter text-center leading-none">Projects</h2>
+        <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black mb-24 text-black tracking-tighter text-center leading-none">Projects</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-8 gap-y-24 px-4 2xl:px-8 w-full mx-auto">
           {/* Project 1 */}
