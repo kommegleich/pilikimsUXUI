@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,9 +22,9 @@ const Navbar = () => {
           }`}
       >
         <div className="flex items-center justify-between">
-          <a href="#" className="flex-shrink-0 text-3xl md:text-4xl font-black tracking-tighter text-[#121212]">
+          <Link to="/" className="flex-shrink-0 text-3xl md:text-4xl font-black tracking-tighter text-[#121212]" style={{ fontFamily: 'Inter, sans-serif' }}>
             PL<span>K</span>
-          </a>
+          </Link>
 
           <a href="#contact" className="px-6 py-3 bg-[#121212] text-white text-sm font-bold rounded-full hover:bg-black transition-colors shrink-0">
             Get in Touch
