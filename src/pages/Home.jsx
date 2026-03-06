@@ -58,11 +58,11 @@ function Home() {
 
           {/* Subtitle */}
           <motion.div
-            className="text-gray-600 text-sm md:text-base font-normal text-center leading-relaxed max-w-2xl"
-            initial={{ opacity: 0, y: 10 }}
+            className="text-gray-600 text-base md:text-lg font-normal text-center leading-relaxed max-w-2xl mt-12"
+            initial={{ opacity: 0, y: 15 }}
             animate={{
               opacity: isHovering ? 1 : 0,
-              y: isHovering ? 0 : 10
+              y: isHovering ? 0 : 15
             }}
             transition={{
               duration: 0.8,
