@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 function Project01() {
     return (
-        <div className="w-full bg-white font-pretendard pt-24 text-[#121212]">
+        <div className="w-full bg-white font-pretendard text-[#121212]">
             {/* 1. Header Area (Blue Background) */}
-            <section className="w-full bg-[#407AFF] text-white pt-24 md:pt-32 pb-64 relative flex flex-col items-center overflow-hidden">
+            <section className="w-full h-screen bg-[rgb(64,122,255)] text-white relative flex flex-col items-center justify-center overflow-hidden">
                 <motion.div
                     className="text-center px-4"
                     initial={{ opacity: 0, y: 30 }}
