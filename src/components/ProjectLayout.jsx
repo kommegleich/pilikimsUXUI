@@ -155,6 +155,8 @@ export function ProjectFullMedia({ src, isVideo = false }) {
 
 // 8. Custom Responsive ERP Tree Chart (Reference Design Match)
 export function ProjectTreeChart({ chip, title, rootNode, branches }) {
+    const [isClicked, setIsClicked] = React.useState(false);
+
     return (
         <section className="w-full py-24 px-4 md:px-8 lg:px-16 flex flex-col items-center bg-[#111622] overflow-hidden">
             {/* Header: Chip and Title */}
@@ -176,34 +178,23 @@ export function ProjectTreeChart({ chip, title, rootNode, branches }) {
                 <div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-start relative select-none">
 
                     {/* Root Node (ERP) */}
-                    <div className="flex-shrink-0 flex items-center justify-center relative w-[140px] mb-[48px] lg:mb-0 lg:mr-[100px] z-10 peer/root">
-                        <div className="w-[140px] h-[48px] border-[1px] border-[#3E4C69] rounded-[24px] flex items-center justify-center bg-[#111622] text-[#6B89AC] text-[14px] font-medium tracking-wide transition-all duration-300 cursor-pointer hover:border-white hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                    <div className="flex-shrink-0 flex items-center justify-center relative w-[140px] mb-12 lg:mb-0 lg:mr-[100px] z-10 lg:mt-[24px]">
+                        <div className="w-[140px] h-[48px] border-[1px] border-[#3E4C69] rounded-[24px] flex items-center justify-center bg-[#111622] text-[#6B89AC] text-[14px] font-medium tracking-wide">
                             {rootNode}
                         </div>
-                        {/* Connecting Line from Root to Spine (Desktop) */}
-                        <div className="hidden lg:block absolute right-[-50px] top-[24px] w-[50px] h-[1px] bg-[#3E4C69] -z-10 origin-left scale-x-0 transition-transform duration-300 ease-in-out peer-hover/root:scale-x-100 peer-hover/root:bg-white" />
-
-                        {/* Connecting Line from Root to Spine (Mobile) */}
-                        <div className="block lg:hidden absolute bottom-[-24px] left-1/2 w-[1px] h-[24px] bg-[#3E4C69] -z-10 origin-top scale-y-0 transition-transform duration-300 ease-in-out peer-hover/root:scale-y-100 peer-hover/root:bg-white" />
                     </div>
 
                     {/* Branches Container */}
-                    <div className="flex flex-col gap-6 lg:gap-4 relative w-full lg:w-auto items-center lg:items-start z-0 lg:mt-[4px]">
-
-                        {/* Vertical Connecting Line (Spine - Desktop) */}
-                        <div className="hidden lg:block absolute left-[-50px] top-[20px] bottom-[20px] w-[1px] bg-[#3E4C69] -z-10 origin-top scale-y-0 transition-transform duration-[400ms] delay-[300ms] ease-linear peer-hover/root:scale-y-100 peer-hover/root:bg-white" />
-
-                        {/* Vertical Connecting Line (Spine - Mobile) */}
-                        <div className="block lg:hidden absolute top-[-24px] bottom-0 left-1/2 w-[1px] bg-[#3E4C69] -z-10 origin-top scale-y-0 transition-transform duration-[400ms] delay-[300ms] ease-linear peer-hover/root:scale-y-100 peer-hover/root:bg-white" />
+                    <div className="flex flex-col gap-6 lg:gap-4 relative z-10 w-full lg:w-auto items-center lg:items-start">
 
                         {branches.map((branch, idx) => (
                             <div key={idx} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 relative group w-full lg:w-auto lg:pl-[50px]">
 
-                                {/* Horizontal Line from Spine to Branch Parent (Desktop) */}
-                                <div className="hidden lg:block absolute left-[-50px] top-[20px] w-[50px] h-[1px] bg-[#3E4C69] -z-10 origin-left scale-x-0 transition-transform duration-300 delay-[700ms] ease-out peer-hover/root:scale-x-100 peer-hover/root:bg-white" />
-
                                 {/* Branch Parent (Title) */}
-                                <div className="flex-shrink-0 w-[140px] h-[40px] border-[1px] border-[#3E4C69] flex items-center justify-center bg-[#111622] text-white text-[13px] font-medium transition-colors cursor-default relative z-10 transition-all duration-300 delay-[1000ms] peer-hover/root:border-white">
+                                <div
+                                    onClick={() => setIsClicked(!isClicked)}
+                                    className={`flex-shrink-0 w-[140px] h-[40px] border-[1px] border-[#3E4C69] flex items-center justify-center text-white text-[13px] font-medium transition-colors cursor-pointer relative z-10 ${isClicked ? 'bg-[#11101C]' : 'bg-[#111622]'}`}
+                                >
                                     {branch.title}
                                 </div>
 
