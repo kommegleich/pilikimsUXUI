@@ -156,68 +156,63 @@ export function ProjectFullMedia({ src, isVideo = false }) {
 // 8. Custom Responsive ERP Tree Chart (Reference Design Match)
 export function ProjectTreeChart({ rootNode, branches }) {
     return (
-        <section className="w-full py-24 px-4 md:px-8 lg:px-16 flex flex-col items-center min-h-[80vh] bg-[#111622]">
-            {/* Chart Container */}
-            <div className="w-full max-w-[1600px] overflow-x-auto pb-8 custom-scrollbar">
-                <div className="min-w-[1200px] flex items-center justify-center relative select-none">
-
-                    {/* Root Node (ERP) */}
-                    <div className="flex-shrink-0 flex items-center justify-center relative w-[140px] mr-12 lg:mr-[100px] z-10">
-                        <div className="w-[140px] h-[48px] border-[1px] border-[#3E4C69] rounded-[24px] flex items-center justify-center bg-transparent text-[#6B89AC] text-[14px] font-medium tracking-wide">
-                            {rootNode}
-                        </div>
-                        {/* Connecting Line from Root to Branches */}
-                        <div className="hidden lg:block absolute right-[-100px] top-1/2 w-[100px] h-[1px] bg-[#3E4C69] -z-10"></div>
+        <section className="w-full py-20 md:py-32 px-4 md:px-8 lg:px-16 flex flex-col items-center bg-[#111622] text-[#6B89AC]">
+            {/* Header: Chip and Title */}
+            <div className="w-full max-w-[1600px] mb-12 md:mb-20 flex flex-col gap-4 items-center md:items-start select-none">
+                {chip && (
+                    <div className="px-4 py-1.5 border border-[#1e293b] text-[#557eb3] text-[11px] md:text-sm font-bold rounded-full uppercase tracking-widest bg-transparent mix-blend-screen">
+                        {chip}
                     </div>
-
-                    {/* Branches Container */}
-                    <div className="flex flex-col gap-4 relative z-10">
-                        {/* Vertical Connecting Line (Spine) */}
-                        <div className="hidden lg:block absolute left-[-50px] top-[24px] bottom-[24px] w-[1px] bg-[#3E4C69] -z-10"></div>
-
-                        {branches.map((branch, idx) => (
-                            <div key={idx} className="flex flex-row items-center gap-3 relative group">
-                                {/* Horizontal Line from Spine to Branch Parent */}
-                                <div className="hidden lg:block absolute left-[-50px] top-1/2 w-[50px] h-[1px] bg-[#3E4C69] -z-10 transition-colors"></div>
-
-                                {/* Branch Parent (Title) */}
-                                <div className="flex-shrink-0 w-[140px] h-[40px] border-[1px] border-[#3E4C69] flex items-center justify-center bg-transparent text-[#6B89AC] text-[13px] font-medium transition-colors cursor-default">
-                                    {branch.title}
-                                </div>
-
-                                {/* Sub Nodes Row */}
-                                {branch.children && branch.children.length > 0 && (
-                                    <div className="flex flex-row gap-3">
-                                        {branch.children.map((child, cIdx) => (
-                                            <div key={cIdx} className="flex-shrink-0 w-[140px] h-[40px] border-[1px] border-[#3E4C69] flex items-center justify-center bg-transparent text-[#6B89AC] text-[12px] font-normal transition-colors cursor-default px-2 whitespace-nowrap overflow-hidden text-ellipsis">
-                                                {child}
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                </div>
+                )}
+                {title && (
+                    <h2 className="text-[clamp(1.2rem,2.5vw,2rem)] font-medium text-white tracking-[-0.04em] text-center md:text-left">
+                        {title}
+                    </h2>
+                )}
             </div>
 
-            {/* Custom Scrollbar CSS (optional injection or rely on global) */}
-            <style jsx="true">{`
-                .custom-scrollbar::-webkit-scrollbar {
-                    height: 8px;
-                }
-                .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                }
-                .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #1e293b;
-                    border-radius: 4px;
-                }
-                .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                    background-color: #334155;
-                }
-            `}</style>
+            {/* Chart Container - Responsive Grid/Flex */}
+            <div className="w-full max-w-[1600px] flex flex-col md:flex-row items-center md:items-stretch justify-start relative select-none">
+
+                {/* Root Node (ERP) */}
+                <div className="flex-shrink-0 flex items-center justify-center relative w-full md:w-auto mb-10 md:mb-0 md:mr-16 lg:mr-[100px] z-10 md:pt-4">
+                    <div className="w-[120px] md:w-[140px] h-[44px] md:h-[48px] border-[1px] border-[#3E4C69] rounded-[24px] flex items-center justify-center bg-[#111622] shadow-[0_0_15px_rgba(17,22,34,1)] text-[#6B89AC] text-[13px] md:text-[14px] font-medium tracking-wide">
+                        {rootNode}
+                    </div>
+                    {/* Connecting Line from Root to Branches */}
+                    <div className="hidden md:block absolute right-[-64px] lg:right-[-100px] top-1/2 w-[64px] lg:w-[100px] h-[1px] bg-[#3E4C69] -z-10"></div>
+                </div>
+
+                {/* Branches Container */}
+                <div className="w-full flex flex-col gap-6 md:gap-4 relative z-10">
+                    {/* Vertical Connecting Line (Spine) for Tablet/Desktop */}
+                    <div className="hidden md:block absolute left-[-30px] lg:left-[-50px] top-[24px] bottom-[24px] w-[1px] bg-[#3E4C69] -z-10"></div>
+
+                    {branches.map((branch, idx) => (
+                        <div key={idx} className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-3 relative group w-full">
+                            {/* Horizontal Line from Spine to Branch Parent */}
+                            <div className="hidden md:block absolute left-[-30px] lg:left-[-50px] top-[20px] w-[30px] lg:w-[50px] h-[1px] bg-[#3E4C69] -z-10 transition-colors"></div>
+
+                            {/* Branch Parent (Title) */}
+                            <div className="flex-shrink-0 w-full md:w-[140px] h-[40px] border-[1px] border-[#3E4C69] flex items-center justify-center bg-[#182031] text-[#6B89AC] text-[12px] md:text-[13px] font-medium transition-colors cursor-default md:bg-transparent">
+                                {branch.title}
+                            </div>
+
+                            {/* Sub Nodes Row Container */}
+                            {branch.children && branch.children.length > 0 && (
+                                <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3 w-full">
+                                    {branch.children.map((child, cIdx) => (
+                                        <div key={cIdx} className="flex-shrink-0 w-[100px] md:w-[130px] lg:w-[140px] h-[36px] md:h-[40px] border-[1px] border-[#3E4C69] flex items-center justify-center bg-transparent text-[#6B89AC] text-[11px] md:text-[12px] font-normal transition-colors cursor-default px-2 whitespace-nowrap overflow-hidden text-ellipsis hover:bg-[#3E4C69]/20">
+                                            {child}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+            </div>
         </section>
     );
 }

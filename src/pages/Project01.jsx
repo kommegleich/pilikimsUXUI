@@ -51,8 +51,8 @@ function Project01() {
             />
 
             <ProjectTreeChart
-                chip=""
-                title=""
+                chip="Flowchart"
+                title="골프장 업무관리에 대한 세분화 및 2/Depth 기능분류"
                 rootNode="ERP"
                 branches={[
                     { title: "대시보드", children: [] },
