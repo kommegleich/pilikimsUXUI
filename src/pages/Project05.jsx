@@ -1,41 +1,19 @@
 import React from 'react';
-import { ProjectLayout, ProjectHero, ProjectMeta, FullMedia, SplitMedia, TextBlock } from '../components/ProjectLayout';
+import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFullMedia, ProjectHighlight } from '../components/ProjectLayout';
 
 function Project05() {
     return (
-        <ProjectLayout nextProjectLink="/project/6" nextProjectTitle="TALKAK" nextProjectBg="bg-[#E25927]">
-
-            <ProjectHero
-                title="PAYIS"
-                subtitle="선불형 간편 충전결제 서비스"
-                bgImage="https://images.unsplash.com/photo-1556742059-47b93231f536?q=80&w=2940&auto=format&fit=crop"
-            />
-
-            <ProjectMeta
-                description="A friction-less prepaid mobile wallet streamlining daily micro-transactions while prioritizing user data protection."
-                link={{ text: "Download App", url: "#" }}
-                metrics={[
-                    { label: "Client", value: "Smartscore Inc." },
-                    { label: "Services", value: "Financial UX\nApp Development" },
-                    { label: "Role", value: "UX Designer" },
-                    { label: "Year", value: "2023" }
+        <ProjectLayout nextProjectLink="/project/6" nextProjectTitle="TALKAK" nextProjectBg="bg-[#263044]">
+            <ProjectHeroExact
+                title="충전결제 서비스 PAYIS"
+                subtitle="선불형 간편 결제 앱(App) 구축 프로젝트"
+                metaItems={[
+                    { label: "OVERVIEW", value: "번거로운 카드 등록 절차 없이 필요한 만큼만 충전하여 사용하는 방식을 채택해, 개인정보 보호와 직관적인 결제 경험을 동시에 확보했습니다." },
+                    { label: "SCOPE", value: ["UX 설계", "UI 화면설계", "약 6개월"] }
                 ]}
             />
-
-            <TextBlock
-                theme="light"
-                heading="Zero Friction"
-                paragraphs={[
-                    "Card registrations often become drop-off points in fintech apps.",
-                    "We bypassed the complex KYC checks with a prepaid model, allowing users to start paying within 30 seconds of app installation."
-                ]}
-            />
-
-            <FullMedia
-                image="https://images.unsplash.com/photo-1616077168079-7e0b5ce5389d?q=80&w=2940&auto=format&fit=crop"
-                caption="Wallet top-up experience flow."
-            />
-
+            <ProjectFullMedia src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2670&auto=format&fit=crop" />
+            <ProjectHighlight text="Secure & fast payments." bgColor="bg-[#263044]" />
         </ProjectLayout>
     );
 }

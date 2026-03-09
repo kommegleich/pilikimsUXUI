@@ -1,54 +1,19 @@
 import React from 'react';
-import { ProjectLayout, ProjectHero, ProjectMeta, FullMedia, SplitMedia, TextBlock } from '../components/ProjectLayout';
+import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFullMedia, ProjectHighlight } from '../components/ProjectLayout';
 
 function Project02() {
     return (
-        <ProjectLayout nextProjectLink="/project/3" nextProjectTitle="GAMING" nextProjectBg="bg-[#1D112A]">
-
-            <ProjectHero
-                title="SAGL"
-                subtitle="아마추어 골프 리그"
-                bgImage="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2940&auto=format&fit=crop"
-            />
-
-            <ProjectMeta
-                description="A seamless competitive registration platform designed to lower the barrier to entry for amateur golf enthusiasts."
-                link={{ text: "View App", url: "https://smartscore.kr" }}
-                metrics={[
-                    { label: "Client", value: "Smartscore Inc." },
-                    { label: "Services", value: "Product Strategy\nUX/UI Design" },
-                    { label: "Role", value: "Product Designer" },
-                    { label: "Year", value: "2023" }
+        <ProjectLayout nextProjectLink="/project/3" nextProjectTitle="스코어 리포트" nextProjectBg="bg-[#2D343A]">
+            <ProjectHeroExact
+                title="ARMATURE GOLF LEAGUE (SAGL)"
+                subtitle="아마추어 골프 리그 선수 등록 UX/UI 고도화"
+                metaItems={[
+                    { label: "OVERVIEW", value: "스마트스코어 앱 내에서 누구나 손쉽게 대회에 참여할 수 있도록, 복잡한 참가 신청의 진입 장벽을 낮추고 직관적인 흐름으로 개선한 프로젝트입니다." },
+                    { label: "SCOPE", value: ["UX 설계", "UI 화면설계", "2023.01~2023.03"] }
                 ]}
             />
-
-            <TextBlock
-                theme="light"
-                heading="Lowering the barrier"
-                paragraphs={[
-                    "Participating in amateur leagues used to be a frustrating process filled with redundant forms and complex rules.",
-                    "We streamlined the flow into a conversational, step-by-step wizard, making signups effortless."
-                ]}
-            />
-
-            <FullMedia
-                image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop"
-                caption="Sample application mockups showcasing the new flow."
-            />
-
-            <TextBlock
-                theme="dark"
-                heading="Scalable Design System"
-                paragraphs={[
-                    "We introduced a dark mode specifically tailored for outdoor usage during golf matches, ensuring high contrast and readability under direct sunlight."
-                ]}
-            />
-
-            <SplitMedia
-                img1="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1528&auto=format&fit=crop"
-                img2="https://images.unsplash.com/photo-1507238692062-710e53a54bde?q=80&w=1664&auto=format&fit=crop"
-            />
-
+            <ProjectFullMedia src="https://images.unsplash.com/photo-1535139262971-c5184570ff25?q=80&w=2670&auto=format&fit=crop" />
+            <ProjectHighlight text="Making golf accessible to everyone." bgColor="bg-[#2D343A]" />
         </ProjectLayout>
     );
 }

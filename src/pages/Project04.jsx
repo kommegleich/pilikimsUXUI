@@ -1,41 +1,19 @@
 import React from 'react';
-import { ProjectLayout, ProjectHero, ProjectMeta, FullMedia, SplitMedia, TextBlock } from '../components/ProjectLayout';
+import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFullMedia, ProjectHighlight } from '../components/ProjectLayout';
 
 function Project04() {
     return (
-        <ProjectLayout nextProjectLink="/project/5" nextProjectTitle="PAYIS" nextProjectBg="bg-[#263044]">
-
-            <ProjectHero
-                title="GIFTING"
-                subtitle="골프와 선물하기 연계서비스"
-                bgImage="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=2340&auto=format&fit=crop"
-            />
-
-            <ProjectMeta
-                description="An integrated social commerce platform connecting golf enthusiasts through curated gifting and relationship-based reminders."
-                link={{ text: "Visit Store", url: "#" }}
-                metrics={[
-                    { label: "Client", value: "Smartscore Inc." },
-                    { label: "Services", value: "Commerce UX\nService Design" },
-                    { label: "Role", value: "Product Designer" },
-                    { label: "Year", value: "2024" }
+        <ProjectLayout nextProjectLink="/project/5" nextProjectTitle="PAYIS" nextProjectBg="bg-[#FF00FB]">
+            <ProjectHeroExact
+                title="골프와 선물하기 연계서비스"
+                subtitle="골프 앱 내 커머스 UX 전략 및 설계"
+                metaItems={[
+                    { label: "OVERVIEW", value: "관계 기반의 리마인드 알림과 맞춤형 큐레이션을 통해 유저 간 소셜 네트워킹을 활성화하고, 구매 프로세스를 단축해 전환율을 극대화했습니다." },
+                    { label: "SCOPE", value: ["UX 설계", "UI 화면설계", "약 4개월"] }
                 ]}
             />
-
-            <TextBlock
-                theme="light"
-                heading="Social Context"
-                paragraphs={[
-                    "By leveraging the social connections already established within the app, we created an ecosystem where users can easily celebrate golf milestones with gifts.",
-                    "Checkout flows were reduced from 5 steps to just 2, dramatically increasing conversion rates."
-                ]}
-            />
-
-            <SplitMedia
-                img1="https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=2430&auto=format&fit=crop"
-                img2="https://images.unsplash.com/photo-1577741630138-0deae466e3b5?q=80&w=2487&auto=format&fit=crop"
-            />
-
+            <ProjectFullMedia src="https://images.unsplash.com/photo-1518316279930-97435f29f0ce?q=80&w=2670&auto=format&fit=crop" />
+            <ProjectHighlight text="Connecting people seamlessly." bgColor="bg-[#FF00FB]" />
         </ProjectLayout>
     );
 }
