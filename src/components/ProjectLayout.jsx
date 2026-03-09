@@ -217,3 +217,40 @@ export function ProjectTreeChart({ chip, title, rootNode, branches }) {
         </section>
     );
 }
+
+// 9. Full Media with Title & Chip
+export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, isVideo = false, bgColor = "bg-white" }) {
+    return (
+        <section className={`w-full py-24 md:py-32 px-4 md:px-8 lg:px-16 flex flex-col items-center ${bgColor}`}>
+            {/* Header: Chip, Title, Subtitle */}
+            <div className="w-full max-w-[1400px] mb-12 flex flex-col gap-6 items-center md:items-start text-center md:text-left select-none">
+                {chip && (
+                    <div className="px-5 py-1.5 border border-black/20 text-[#121212] text-[11px] md:text-sm font-bold uppercase tracking-widest rounded-full mix-blend-multiply">
+                        {chip}
+                    </div>
+                )}
+                <div className="flex flex-col gap-4">
+                    {title && (
+                        <h2 className="text-[clamp(2rem,4vw,3rem)] font-medium text-[#121212] tracking-[-0.04em] leading-[1.2]">
+                            {title}
+                        </h2>
+                    )}
+                    {subtitle && (
+                        <p className="text-lg md:text-xl text-gray-500 font-medium leading-[1.6] max-w-3xl">
+                            {subtitle}
+                        </p>
+                    )}
+                </div>
+            </div>
+
+            {/* Media Container */}
+            <div className="w-full max-w-[1800px] mx-auto bg-gray-100">
+                {isVideo ? (
+                    <video src={src} autoPlay loop muted playsInline className="w-full h-auto object-cover" />
+                ) : (
+                    <img src={src} alt="Section Media" className="w-full h-auto object-cover" />
+                )}
+            </div>
+        </section>
+    );
+}

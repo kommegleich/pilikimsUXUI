@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFullMedia, ProjectHighlight, ProjectTreeChart } from '../components/ProjectLayout';
+import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFullMedia, ProjectHighlight, ProjectTreeChart, ProjectFullMediaWithTitle } from '../components/ProjectLayout';
 
 import imgM01 from '../images/project1-m01.webp';
 import imgM02 from '../images/project1-m02.webp';
@@ -70,20 +70,12 @@ function Project01() {
                 ]}
             />
 
-            <ProjectGrid
-                images={[
-                    imgM02,
-                    "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2669&auto=format&fit=crop"
-                ]}
-            />
-
-            <ProjectSplit
-                title="A frictionless path to care."
-                text={[
-                    "When users arrive seeking help, the last thing they need is a convoluted booking process. We streamlined the onboarding, cutting unnecessary steps and grouping information logically.",
-                    "The result is a calm, guided experience that reassures patients that they are in safe hands, even before their session begins."
-                ]}
-                image="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop"
+            <ProjectFullMediaWithTitle
+                chip="New Section"
+                title="새로운 기능을 소개합니다"
+                subtitle="기존 프론트 업무의 불편함을 개선한 통합 시스템을 만나보세요."
+                src={imgM02}
+                bgColor="bg-gray-50"
             />
 
         </ProjectLayout>
