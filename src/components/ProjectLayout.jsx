@@ -260,7 +260,7 @@ export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, isVideo 
                         style={{ y }}
                         src={src}
                         alt="Section Media"
-                        className="w-full h-auto object-cover origin-top"
+                        className="w-[95%] md:w-[80%] max-w-[1200px] h-auto object-contain origin-top mx-auto"
                     />
                 )}
             </div>
