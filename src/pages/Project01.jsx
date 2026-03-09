@@ -83,9 +83,15 @@ function Project01() {
             />
 
             <ProjectFullMediaWithTitle
-                chip="System"
-                title="통합 디자인 시스템"
-                subtitle="기존 프론트 업무의 불편함을 개선한 통합 시스템을 만나보세요."
+                chip="Design Framework"
+                title="디자인 표준화와 모듈 자산화에서 부터 인터렉션 원칙 수립까지"
+                subtitle={
+                    <>
+                        서비스 전반에 파편화되어 있던 서치바, 필터, 테이블 등 핵심 UI 요소를 공통 규격으로 통합 정의하여 시각적 일관성과 구조적 확장성을 확보했습니다. 툴팁, 팝업 등 주요 컴포넌트의 노출 우선순위와 예외 상황에 대한 <strong>디자인 정책(Design Policy)</strong>을 정밀하게 수립하고 이를 모듈화·자산화함으로써, 기획의 생산성뿐만 아니라 개발 협업의 실질적인 효율을 극대화했습니다.
+                        <br /><br />
+                        나아가 마우스 호버, 스크롤, 정렬 등 테이블 내 모든 조작 행위에 대한 기능 특화형 인터랙션 원칙을 규정하여, 어떤 복잡한 비즈니스 로직에서도 사용자에게 일관된 피드백을 보장하는 직관적이고 견고한 사용성(Robust Usability)을 구현했습니다.
+                    </>
+                }
                 images={interImages}
                 bgColor="bg-gray-50"
             />

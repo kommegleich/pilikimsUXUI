@@ -243,7 +243,7 @@ export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, images, 
             {/* Header: Chip, Title, Subtitle */}
             <div className="w-full max-w-[1400px] px-4 md:px-8 lg:px-16 mb-12 flex flex-col gap-6 items-center md:items-start text-center md:text-left select-none">
                 {chip && (
-                    <div className="px-5 py-1.5 border border-black/20 text-[#121212] text-[11px] md:text-sm font-bold uppercase tracking-widest rounded-full mix-blend-multiply">
+                    <div className="px-4 py-1.5 bg-[#11101C] text-white text-[13px] md:text-sm font-medium rounded-[4px]">
                         {chip}
                     </div>
                 )}
@@ -262,9 +262,9 @@ export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, images, 
             </div>
 
             {/* Media Container without Parallax Window */}
-            <div ref={ref} className="w-full relative flex justify-center h-[60vh] md:h-[80vh] md:mt-8">
+            <div ref={ref} className="w-full relative flex justify-center h-[50vh] md:h-[65vh] md:mt-8">
                 {images && images.length > 0 ? (
-                    <div className="w-full relative max-w-[1200px] flex justify-center items-center h-full">
+                    <div className="w-full relative max-w-[1400px] flex justify-center items-center h-full px-4 md:px-8">
                         <AnimatePresence mode="popLayout">
                             <motion.img
                                 key={currentIndex}
@@ -274,7 +274,7 @@ export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, images, 
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -50 }}
                                 transition={{ duration: 0.8, ease: "easeInOut" }}
-                                className="w-[95%] md:w-[80%] max-w-[1200px] h-auto object-contain absolute mx-auto"
+                                className="w-full md:w-[90%] max-w-[1400px] h-full object-contain absolute mx-auto"
                             />
                         </AnimatePresence>
                     </div>
