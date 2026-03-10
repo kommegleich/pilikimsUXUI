@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom';
 
 // 1. Main Wrapper
-export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nextProjectBg = "bg-[#1f1d2e]" }) {
+export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nextProjectBg = "bg-[#1f1d2e]", nextProjectDesc }) {
     return (
         <div className="w-full bg-white text-[#121212] font-pretendard selection:bg-[#4338ca] selection:text-white pb-0">
             {children}
@@ -11,18 +11,23 @@ export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nex
             {/* Next Project Footer */}
             {nextProjectLink && nextProjectTitle && (
                 <section className={`w-full h-screen ${nextProjectBg} text-white flex flex-col items-center justify-center relative group cursor-pointer overflow-hidden`}>
-                    <Link to={nextProjectLink} onClick={() => window.scrollTo(0, 0)} className="absolute inset-0 z-10 w-full h-full flex flex-col items-center justify-center">
+                    <Link to={nextProjectLink} onClick={() => window.scrollTo(0, 0)} className="absolute inset-0 z-10 w-full h-full flex flex-col items-center justify-center px-6">
                         <motion.p
                             className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase opacity-60 mb-8"
                             initial={{ y: 20, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            Next Case
+                            Next Project
                         </motion.p>
-                        <h2 className="text-[clamp(4rem,12vw,15rem)] font-black tracking-[-0.09em] leading-none transition-transform duration-700 ease-out text-center group-hover:scale-105">
+                        <h2 className="text-[clamp(4rem,12vw,15rem)] font-black tracking-[-0.09em] leading-none transition-transform duration-700 ease-out text-center group-hover:scale-105 mb-8">
                             {nextProjectTitle}
                         </h2>
+                        {nextProjectDesc && (
+                            <p className="max-w-2xl text-center text-sm md:text-lg font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out delay-100 break-keep transform translate-y-2 group-hover:translate-y-0 mt-6 px-4 text-white/90">
+                                {nextProjectDesc}
+                            </p>
+                        )}
                     </Link>
                 </section>
             )}
