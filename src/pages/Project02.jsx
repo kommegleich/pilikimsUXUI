@@ -59,7 +59,7 @@ function Project02() {
             <ProjectFullMediaWithTitle
                 label="FLOWCHART"
                 src={imgFC2}
-                bgColor="bg-[#181C2B]"
+                bgColor="bg-[#09122A]"
                 textColor="text-white"
                 objectFit="object-cover"
                 centered={true}
