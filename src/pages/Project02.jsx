@@ -56,7 +56,7 @@ function Project02() {
                 rounded="rounded-[40px]"
                 bgColor="bg-[#09122A]"
                 gap="gap-0"
-                itemBg="bg-[#030303]"
+                itemBg="bg-transparent"
             />
             <ProjectFullMediaWithTitle
                 label="FLOWCHART"
