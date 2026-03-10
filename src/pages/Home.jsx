@@ -123,7 +123,7 @@ function Home() {
           ].map((project, index) => (
             <Link
               key={index}
-              to={index === 0 ? "/project/1" : "#"}
+              to={`/project/${index + 1}`}
               className={`group flex flex-col md:flex-row items-center justify-between py-12 md:py-16 px-4 md:px-8 border-b border-gray-800 transition-all duration-500 overflow-hidden ${project.bgClass}`}
             >
               {/* Default Title */}

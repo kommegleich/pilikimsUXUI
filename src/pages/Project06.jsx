@@ -3,7 +3,13 @@ import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFull
 
 function Project06() {
     return (
-        <ProjectLayout nextProjectLink="/project/1" nextProjectTitle="통합관리 시스템" nextProjectBg="bg-[#F26027]">
+        <ProjectLayout 
+            nextProjectLink="/project/1" 
+            nextProjectTitle="골프장 통합관리 시스템" 
+            nextProjectBg="bg-gradient-to-r from-[#457FF3] to-[#10182B]"
+            bgColor="bg-[#F26027]"
+            textColor="text-white"
+        >
             <ProjectHeroExact
                 title="TALKAK 랜덤 사진전송 서비스"
                 subtitle="심플한 랜덤 사진 공유 소셜 서비스"

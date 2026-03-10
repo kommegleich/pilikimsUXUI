@@ -3,7 +3,13 @@ import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFull
 
 function Project05() {
     return (
-        <ProjectLayout nextProjectLink="/project/6" nextProjectTitle="TALKAK" nextProjectBg="bg-[#263044]">
+        <ProjectLayout 
+            nextProjectLink="/project/6" 
+            nextProjectTitle="TALKAK 랜덤 사진전송 서비스" 
+            nextProjectBg="bg-gradient-to-r from-[#FD723B] to-[#F26027]"
+            bgColor="bg-[#263044]"
+            textColor="text-white"
+        >
             <ProjectHeroExact
                 title="충전결제 서비스 PAYIS"
                 subtitle="선불형 간편 결제 앱(App) 구축 프로젝트"

@@ -10,8 +10,8 @@ function Project02() {
     return (
         <ProjectLayout
             nextProjectLink="/project/3"
-            nextProjectTitle="스코어 리포트"
-            nextProjectBg="bg-[#2D343A]"
+            nextProjectTitle="스코어를 게이밍하다"
+            nextProjectBg="bg-gradient-to-r from-[#00FF37] to-[#FF00FB]"
             bgColor="bg-[#09122A]"
             textColor="text-white"
         >

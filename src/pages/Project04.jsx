@@ -3,7 +3,13 @@ import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFull
 
 function Project04() {
     return (
-        <ProjectLayout nextProjectLink="/project/5" nextProjectTitle="PAYIS" nextProjectBg="bg-[#FF00FB]">
+        <ProjectLayout 
+            nextProjectLink="/project/5" 
+            nextProjectTitle="충전결제 서비스 PAYIS" 
+            nextProjectBg="bg-gradient-to-r from-[#0073FF] to-[#263044]"
+            bgColor="bg-[#9F2152]"
+            textColor="text-white"
+        >
             <ProjectHeroExact
                 title="골프와 선물하기 연계서비스"
                 subtitle="골프 앱 내 커머스 UX 전략 및 설계"
@@ -13,7 +19,7 @@ function Project04() {
                 ]}
             />
             <ProjectFullMedia src="https://images.unsplash.com/photo-1518316279930-97435f29f0ce?q=80&w=2670&auto=format&fit=crop" />
-            <ProjectHighlight text="Connecting people seamlessly." bgColor="bg-[#FF00FB]" />
+            <ProjectHighlight text="Connecting people seamlessly." bgColor="bg-[#9F2152]" />
         </ProjectLayout>
     );
 }

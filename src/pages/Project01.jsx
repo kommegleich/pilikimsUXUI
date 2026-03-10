@@ -27,7 +27,7 @@ function Project01() {
     return (
         <ProjectLayout 
             nextProjectLink="/project/2" 
-            nextProjectTitle="SAGL" 
+            nextProjectTitle="ARMATURE GOLF LEAGUE (SAGL)" 
             nextProjectBg="bg-gradient-to-r from-[#2D343A] to-[#09122A]"
             nextProjectDesc="스마트스코어 앱 내에서 누구나 손쉽게 대회에 참여할 수 있도록, 복잡한 참가 신청의 진입 장벽을 낮추고 직관적인 흐름으로 개선한 아마추어 골프 리그 선수 등록 UX/UI 고도화 프로젝트"
         >
