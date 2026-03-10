@@ -3,9 +3,9 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom';
 
 // 1. Main Wrapper
-export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nextProjectBg = "bg-[#1f1d2e]", nextProjectDesc }) {
+export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nextProjectBg = "bg-[#1f1d2e]", nextProjectDesc, bgColor = "bg-white", textColor = "text-[#121212]" }) {
     return (
-        <div className="w-full bg-white text-[#121212] font-pretendard selection:bg-[#4338ca] selection:text-white pb-0">
+        <div className={`w-full ${bgColor} ${textColor} font-pretendard selection:bg-[#4338ca] selection:text-white pb-0 transition-colors duration-500`}>
             {children}
 
             {/* Next Project Footer */}
@@ -36,9 +36,9 @@ export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nex
 }
 
 // 2. Exact Match Hero + Meta Section
-export function ProjectHeroExact({ title, subtitle, metaItems }) {
+export function ProjectHeroExact({ title, subtitle, metaItems, bgColor = "bg-transparent", textColor = "text-[#121212]", subtitleColor = "text-gray-400", labelColor = "text-gray-500" }) {
     return (
-        <section className="w-full bg-white pt-40 md:pt-56 pb-24 md:pb-40 px-6 md:px-12 lg:px-16 flex justify-center">
+        <section className={`w-full ${bgColor} pt-40 md:pt-56 pb-24 md:pb-40 px-6 md:px-12 lg:px-16 flex justify-center transition-colors duration-500`}>
             <div className="w-full max-w-[1800px] grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start">
 
                 {/* Left: Titles */}
@@ -48,10 +48,10 @@ export function ProjectHeroExact({ title, subtitle, metaItems }) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] text-[#121212] whitespace-pre-line">
+                    <h1 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${textColor} whitespace-pre-line`}>
                         {title}
                     </h1>
-                    <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] text-gray-400 whitespace-pre-line">
+                    <h2 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${subtitleColor} whitespace-pre-line`}>
                         {subtitle}
                     </h2>
                 </motion.div>
@@ -66,7 +66,7 @@ export function ProjectHeroExact({ title, subtitle, metaItems }) {
                     {metaItems.map((meta, idx) => (
                         <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
                             <div className="md:col-span-4">
-                                <h3 className="text-[10px] md:text-xs font-bold tracking-[0.1em] text-gray-500 uppercase">
+                                <h3 className={`text-[10px] md:text-xs font-bold tracking-[0.1em] ${labelColor} uppercase`}>
                                     {meta.label}
                                 </h3>
                             </div>
@@ -74,12 +74,12 @@ export function ProjectHeroExact({ title, subtitle, metaItems }) {
                                 {/* If value is array (like Scope/Results), render list */}
                                 {Array.isArray(meta.value) ? (
                                     meta.value.map((v, i) => (
-                                        <p key={i} className="text-sm md:text-[15px] font-medium leading-[1.6] text-[#121212]">
+                                        <p key={i} className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>
                                             {v}
                                         </p>
                                     ))
                                 ) : (
-                                    <p className="text-sm md:text-[15px] font-medium leading-[1.6] text-[#121212]">
+                                    <p className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>
                                         {meta.value}
                                     </p>
                                 )}
@@ -94,13 +94,13 @@ export function ProjectHeroExact({ title, subtitle, metaItems }) {
 }
 
 // 4. Split Layout (Text + Media) - NO BORDER RADIUS
-export function ProjectSplit({ title, text, image, reverse = false }) {
+export function ProjectSplit({ title, text, image, reverse = false, bgColor = "bg-transparent", textColor = "text-[#121212]", descColor = "text-gray-600" }) {
     return (
-        <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12 lg:px-16 flex justify-center">
+        <section className={`w-full ${bgColor} py-16 md:py-24 px-6 md:px-12 lg:px-16 flex justify-center transition-colors duration-500`}>
             <div className={`w-full max-w-[1800px] grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center`}>
                 <div className={`flex flex-col gap-8 ${reverse ? 'lg:order-2 lg:pl-16' : 'lg:pr-16'}`}>
-                    {title && <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-medium leading-[1.1] tracking-[-0.07em] text-[#121212]">{title}</h2>}
-                    <div className="flex flex-col gap-6 text-lg md:text-xl text-gray-600 font-medium leading-[1.6]">
+                    {title && <h2 className={`text-[clamp(2.5rem,4vw,4rem)] font-medium leading-[1.1] tracking-[-0.07em] ${textColor}`}>{title}</h2>}
+                    <div className={`flex flex-col gap-6 text-lg md:text-xl ${descColor} font-medium leading-[1.6]`}>
                         {text.map((p, i) => <p key={i}>{p}</p>)}
                     </div>
                 </div>
@@ -127,14 +127,17 @@ export function ProjectHighlight({ text, bgColor = "bg-[#4338ca]", textColor = "
 }
 
 // 6. Double Image Grid - NO BORDER RADIUS, FULL WIDTH
-export function ProjectGrid({ images }) {
+export function ProjectGrid({ images, bgColor = "bg-transparent", rounded = "rounded-none", gap = "gap-6", itemBg = "bg-gray-200", fits = [], aspect = "" }) {
     return (
-        <section className="w-full bg-white pb-6 flex justify-center">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-0 md:px-6">
+        <section className={`w-full ${bgColor} pb-6 flex justify-center transition-colors duration-500`}>
+            <div className={`w-full grid grid-cols-1 md:grid-cols-2 ${gap} px-0 md:px-6`}>
                 {images.map((img, idx) => (
-                    <div key={idx} className="w-full bg-gray-200">
-                        {/* Notice: removed rounded classes */}
-                        <img src={img} alt={`Grid ${idx}`} className="w-full h-full object-cover aspect-[4/3] md:aspect-[4/5]" />
+                    <div key={idx} className={`w-full ${itemBg} overflow-hidden ${rounded}`}>
+                        <img 
+                            src={img} 
+                            alt={`Grid ${idx}`} 
+                            className={`w-full h-full ${fits[idx] || 'object-cover'} ${aspect || 'aspect-[4/3] md:aspect-[4/5]'}`} 
+                        />
                     </div>
                 ))}
             </div>
@@ -229,7 +232,7 @@ export function ProjectTreeChart({ chip, title, subtitle, rootNode, branches }) 
 }
 
 // 9. Full Media with Title & Chip
-export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, images, isVideo = false, bgColor = "bg-white", layout = "full" }) {
+export function ProjectFullMediaWithTitle({ chip, title, subtitle, label, src, images, isVideo = false, bgColor = "bg-white", layout = "full", textColor = "text-[#121212]", objectFit = "object-contain", centered = false, parallax = true }) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -249,20 +252,25 @@ export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, images, 
     }, [images]);
 
     const renderHeader = () => (
-        <div className={`w-full flex flex-col gap-6 items-center md:items-start text-center md:text-left select-none ${layout === 'split' ? '' : 'max-w-[1400px] px-4 md:px-8 lg:px-16 mb-12'}`}>
+        <div className={`w-full flex flex-col gap-2 ${centered ? 'items-center text-center' : 'items-center md:items-start text-center md:text-left'} select-none ${layout === 'split' ? '' : 'max-w-[1400px] px-4 md:px-8 lg:px-16 mb-12'}`}>
+            {label && (
+                <p className={`text-xs md:text-sm font-bold tracking-[0.3em] uppercase opacity-60 mb-8 ${textColor}`}>
+                    {label}
+                </p>
+            )}
             {chip && (
                 <div className="px-5 py-1.5 border border-[rgb(17,22,34)] text-white text-[11px] md:text-sm font-bold uppercase tracking-widest bg-[rgb(17,22,34)] rounded-[4px] w-fit">
                     {chip}
                 </div>
             )}
-            <div className="flex flex-col gap-4">
+            <div className={`flex flex-col gap-4 ${centered ? 'items-center' : ''}`}>
                 {title && (
-                    <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-medium text-[#121212] tracking-[-0.04em] leading-[1.2]">
+                    <h2 className={`text-[clamp(1.8rem,3.5vw,2.8rem)] font-medium tracking-[-0.04em] leading-[1.2] ${textColor}`}>
                         {title}
                     </h2>
                 )}
                 {subtitle && (
-                    <p className="text-[15px] md:text-base text-[#9A9BA5] font-normal leading-[1.7] max-w-3xl opacity-90">
+                    <p className={`text-[15px] md:text-base font-normal leading-[1.7] max-w-3xl opacity-90 ${textColor === 'text-white' ? 'text-white/60' : 'text-[#9A9BA5]'}`}>
                         {subtitle}
                     </p>
                 )}
@@ -283,18 +291,18 @@ export function ProjectFullMediaWithTitle({ chip, title, subtitle, src, images, 
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.8, ease: "easeInOut" }}
-                            className="w-full h-full object-contain absolute mx-auto"
+                            className={`w-full h-full ${objectFit} absolute mx-auto`}
                         />
                     </AnimatePresence>
                 </div>
             ) : isVideo ? (
-                <video src={src} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                <video src={src} autoPlay loop muted playsInline className={`w-full h-full ${objectFit}`} />
             ) : (
                 <motion.img
-                    style={{ y }}
+                    style={parallax ? { y } : {}}
                     src={src}
                     alt="Section Media"
-                    className="w-full h-full object-contain mx-auto"
+                    className={`w-full h-full ${objectFit} mx-auto`}
                 />
             )}
         </div>
