@@ -133,48 +133,52 @@ function Project03() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 w-full">
                     {/* Left Column (Insight Layer) */}
                     <motion.div
-                        className="flex flex-col items-center text-center"
+                        className="flex flex-col items-center text-center h-full justify-between"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <img src={imgM04} alt="나의 골프스토리 그 시절 그 라운드 (Insight)" className="w-[180px] md:w-[220px] h-auto object-contain mb-8 md:mb-12" />
+                        <div className="flex flex-col items-center">
+                            <img src={imgM04} alt="나의 골프스토리 그 시절 그 라운드 (Insight)" className="w-[180px] md:w-[220px] h-auto object-contain mb-8 md:mb-12" />
 
-                        <h4 className="text-[#8DBE36] text-sm md:text-base font-medium mb-4 tracking-widest uppercase">
-                            PERFORMANCE INSIGHT LAYER
-                        </h4>
-                        <h3 className="text-[#E0E0E0] text-lg md:text-xl font-bold mb-6">
-                            데이터 기반 성과 해석 중심 설계
-                        </h3>
-                        <p className="text-[#888888] text-[15px] md:text-base leading-[1.7] whitespace-pre-line mb-16 break-keep">
-                            {`반복된 플레이 데이터를 기반으로 성향 분석과 성과 인식을\n가능하게 하는 분석형 서비스로 설계\n\n스코어를 개인화된 인사이트로 전환해\n사용자 성장 흐름을 시각화`}
-                        </p>
+                            <h4 className="text-[#8DBE36] text-sm md:text-base font-medium mb-4 tracking-widest uppercase">
+                                PERFORMANCE INSIGHT LAYER
+                            </h4>
+                            <h3 className="text-[#E0E0E0] text-lg md:text-xl font-bold mb-6">
+                                데이터 기반 성과 해석 중심 설계
+                            </h3>
+                            <p className="text-[#888888] text-[15px] md:text-base leading-[1.7] whitespace-pre-line mb-16 break-keep">
+                                {`반복된 플레이 데이터를 기반으로 성향 분석과 성과 인식을\n가능하게 하는 분석형 서비스로 설계\n\n스코어를 개인화된 인사이트로 전환해\n사용자 성장 흐름을 시각화`}
+                            </p>
+                        </div>
 
-                        <img src={imgM06} alt="Performance Insight Phone Mockup" className="w-auto max-w-full h-[400px] md:h-[500px] lg:h-[560px] object-contain mix-blend-lighten" />
+                        <img src={imgM06} alt="Performance Insight Phone Mockup" className="w-full max-w-[420px] h-auto object-contain" />
                     </motion.div>
 
                     {/* Right Column (Emotional Memory Layer) */}
                     <motion.div
-                        className="flex flex-col items-center text-center mt-12 md:mt-0"
+                        className="flex flex-col items-center text-center mt-12 md:mt-0 h-full justify-between"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     >
-                        <img src={imgM05} alt="나의 골프스토리 그 시절 그 라운드 (Emotion)" className="w-[180px] md:w-[220px] h-auto object-contain mb-8 md:mb-12" />
+                        <div className="flex flex-col items-center">
+                            <img src={imgM05} alt="나의 골프스토리 그 시절 그 라운드 (Emotion)" className="w-[180px] md:w-[220px] h-auto object-contain mb-8 md:mb-12" />
 
-                        <h4 className="text-[#D94F7B] text-sm md:text-base font-medium mb-4 tracking-widest uppercase">
-                            EMOTIONAL MEMORY LAYER
-                        </h4>
-                        <h3 className="text-[#E0E0E0] text-lg md:text-xl font-bold mb-6">
-                            감정 회상을 위한 감성 중심 설계
-                        </h3>
-                        <p className="text-[#888888] text-[15px] md:text-base leading-[1.7] whitespace-pre-line mb-16 break-keep">
-                            {`플레이 당시의 시간, 장소, 동반자를 중심으로\n감정적 기억을 구조화한 경험 기록형 서비스\n\n정서적 몰입과 회상을 위한 타임라인 기반 UI로 설계`}
-                        </p>
+                            <h4 className="text-[#D94F7B] text-sm md:text-base font-medium mb-4 tracking-widest uppercase">
+                                EMOTIONAL MEMORY LAYER
+                            </h4>
+                            <h3 className="text-[#E0E0E0] text-lg md:text-xl font-bold mb-6">
+                                감정 회상을 위한 감성 중심 설계
+                            </h3>
+                            <p className="text-[#888888] text-[15px] md:text-base leading-[1.7] whitespace-pre-line mb-16 break-keep">
+                                {`플레이 당시의 시간, 장소, 동반자를 중심으로\n감정적 기억을 구조화한 경험 기록형 서비스\n\n정서적 몰입과 회상을 위한 타임라인 기반 UI로 설계`}
+                            </p>
+                        </div>
 
-                        <img src={imgM07} alt="Emotional Memory Phone Mockup" className="w-auto max-w-full h-[400px] md:h-[500px] lg:h-[560px] object-contain mix-blend-lighten" />
+                        <img src={imgM07} alt="Emotional Memory Phone Mockup" className="w-full max-w-[420px] h-auto object-contain" />
                     </motion.div>
                 </div>
             </section>
