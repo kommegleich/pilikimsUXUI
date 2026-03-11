@@ -36,9 +36,9 @@ export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nex
 }
 
 // 2. Exact Match Hero + Meta Section
-export function ProjectHeroExact({ title, subtitle, metaItems, bgColor = "bg-transparent", textColor = "text-[#121212]", subtitleColor = "text-gray-400", labelColor = "text-gray-500", bgImage }) {
+export function ProjectHeroExact({ title, subtitle, metaItems, bgColor = "bg-transparent", textColor = "text-[#121212]", subtitleColor = "text-gray-400", labelColor = "text-gray-500", bgImage, isFullHeight = false }) {
     return (
-        <section className={`w-full ${bgColor} pt-40 md:pt-56 pb-24 md:pb-40 px-6 md:px-12 lg:px-16 flex justify-center transition-colors duration-500 relative overflow-hidden`}>
+        <section className={`w-full ${bgColor} pt-40 md:pt-56 pb-24 md:pb-40 px-6 md:px-12 lg:px-16 flex justify-center ${isFullHeight ? 'min-h-[100svh] items-center' : ''} transition-colors duration-500 relative overflow-hidden`}>
             {bgImage && (
                 <div className="absolute inset-0 w-full h-full z-0">
                     <img src={bgImage} alt="Hero Background" className="w-full h-full object-cover" />

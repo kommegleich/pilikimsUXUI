@@ -1,7 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ProjectLayout, ProjectHeroExact, ProjectGrid, ProjectSplit, ProjectFullMedia, ProjectHighlight } from '../components/ProjectLayout';
 
 import imgHero from '../images/project3_backef.png';
+import imgM01 from '../images/project3-m01.png';
 
 function Project03() {
     return (
@@ -22,10 +24,24 @@ function Project03() {
                     { label: "SCOPE", value: ["UX 설계", "UI 화면설계", "약 2개월"] }
                 ]}
                 bgImage={imgHero}
+                isFullHeight={true}
                 textColor="text-white"
                 subtitleColor="text-white/80"
                 labelColor="text-white/50"
             />
+
+            {/* 02 - Overlapping phones image area */}
+            <section className="w-full relative z-20 flex justify-center -mt-32 md:-mt-[25vh] px-6 md:px-12 lg:px-16 pb-24 mx-auto max-w-[1400px]">
+                <motion.img
+                    src={imgM01}
+                    alt="Phones mockups"
+                    className="w-full max-w-[900px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                />
+            </section>
 
             {/* 03 - 화면 전체 너비로 배색된 큰 텍스트 강조(Highlight) 영역 */}
             <ProjectHighlight text="Data driven golf experience." bgColor="bg-[#010101]" textColor="text-white" />
