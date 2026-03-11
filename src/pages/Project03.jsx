@@ -151,7 +151,7 @@ function Project03() {
                             {`반복된 플레이 데이터를 기반으로 성향 분석과 성과 인식을\n가능하게 하는 분석형 서비스로 설계\n\n스코어를 개인화된 인사이트로 전환해\n사용자 성장 흐름을 시각화`}
                         </p>
 
-                        <img src={imgM06} alt="Performance Insight Phone Mockup" className="w-full max-w-[500px] h-auto object-contain" />
+                        <img src={imgM06} alt="Performance Insight Phone Mockup" className="w-auto max-w-full h-[400px] md:h-[500px] lg:h-[560px] object-contain mix-blend-lighten" />
                     </motion.div>
 
                     {/* Right Column (Emotional Memory Layer) */}
@@ -174,7 +174,7 @@ function Project03() {
                             {`플레이 당시의 시간, 장소, 동반자를 중심으로\n감정적 기억을 구조화한 경험 기록형 서비스\n\n정서적 몰입과 회상을 위한 타임라인 기반 UI로 설계`}
                         </p>
 
-                        <img src={imgM07} alt="Emotional Memory Phone Mockup" className="w-full max-w-[500px] h-auto object-contain" />
+                        <img src={imgM07} alt="Emotional Memory Phone Mockup" className="w-auto max-w-full h-[400px] md:h-[500px] lg:h-[560px] object-contain mix-blend-lighten" />
                     </motion.div>
                 </div>
             </section>
