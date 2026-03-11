@@ -10,18 +10,17 @@ import {
     ProjectCenteredIntro,
     ProjectCenteredHighlightBlock,
     ProjectThreeColTextBlocks,
-    ProjectPhoneWithMarquee,
-    ProjectTwoColHighlightAndPhones
+    ProjectPhoneWithMarquee
 } from '../components/ProjectLayout';
 
 import imgHero from '../images/project3_backef.png';
 import imgM01 from '../images/project3-m01.webp';
 import imgM02 from '../images/project3-m02.webp';
-import imgM03 from '../images/project3-m03.webp'; // Left main phone
-import imgM04 from '../images/project3-m04.webp'; // Left sub badge 1
-import imgM05 from '../images/project3-m05.webp'; // Left sub badge 2
-import imgM06 from '../images/project3-m06.webp'; // Right main phone 
-import imgM07 from '../images/project3-m07.webp'; // Right sub banner
+import imgM03 from '../images/project3-m03.webp';
+import imgM04 from '../images/project3-m04.webp';
+import imgM05 from '../images/project3-m05.webp';
+import imgM06 from '../images/project3-m06.webp';
+import imgM07 from '../images/project3-m07.webp';
 
 function Project03() {
     return (
@@ -117,28 +116,68 @@ function Project03() {
                 bgColor="bg-[#010101]"
             />
 
-            {/* 07 - 투 칼럼 하이라이트 & 폰 그리드 영역 */}
-            <ProjectTwoColHighlightAndPhones
-                topTitleLeft="스코어를 해석하다"
-                topTitleRight="스코어를 기록하다"
-                badgeLeft={["나의 골프스토리", "그 시절 그 라운드"]}
-                badgeRight={["나의 골프스토리", "그 시절 그 라운드"]}
-                subtitleLeft="데이터 기반 성과 해석 중심 설계"
-                subtitleRight="감정 회상을 위한 감성 중심 설계"
-                descLeft={[
-                    "반복된 플레이 데이터를 기반으로 성향 분석과 성과 인식을\n가능하게 하는 분석형 서비스로 설계",
-                    "스코어를 개인화된 인사이트로 전환해\n사용자 성장 흐름을 시각화"
-                ]}
-                descRight={[
-                    "플레이 당시의 시간, 장소, 동반자를 중심으로\n감정적 기억을 구조화한 경험 기록형 서비스",
-                    "정서적 몰입과 회상을 위한 타임라인 기반 UI로 설계"
-                ]}
-                imageLeft={imgM03}
-                imageRight={imgM06}
-                subImagesLeft={[imgM04, imgM05]}
-                subImagesRight={[imgM07]}
-                bgColor="bg-black"
-            />
+            {/* 07 - 스코어를 해석하다 / 기록하다 2단 이미지 레이아웃 */}
+            <section className="w-full relative z-20 flex flex-col items-center px-6 md:px-12 lg:px-16 py-24 mx-auto max-w-[1400px]">
+                {/* m03 title image */}
+                <motion.img
+                    src={imgM03}
+                    alt="스코어를 해석하다 스코어를 기록하다"
+                    className="w-full max-w-[800px] h-auto object-contain mb-16 md:mb-24"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                />
+
+                {/* Two column grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 w-full">
+                    {/* Left Column (Insight Layer) */}
+                    <motion.div
+                        className="flex flex-col items-center text-center"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <img src={imgM04} alt="나의 골프스토리 그 시절 그 라운드 (Insight)" className="w-[180px] md:w-[220px] h-auto object-contain mb-8 md:mb-12" />
+
+                        <h4 className="text-[#8DBE36] text-sm md:text-base font-medium mb-4 tracking-widest uppercase">
+                            PERFORMANCE INSIGHT LAYER
+                        </h4>
+                        <h3 className="text-[#E0E0E0] text-lg md:text-xl font-bold mb-6">
+                            데이터 기반 성과 해석 중심 설계
+                        </h3>
+                        <p className="text-[#888888] text-[15px] md:text-base leading-[1.7] whitespace-pre-line mb-16 break-keep">
+                            {`반복된 플레이 데이터를 기반으로 성향 분석과 성과 인식을\n가능하게 하는 분석형 서비스로 설계\n\n스코어를 개인화된 인사이트로 전환해\n사용자 성장 흐름을 시각화`}
+                        </p>
+
+                        <img src={imgM06} alt="Performance Insight Phone Mockup" className="w-full max-w-[500px] h-auto object-contain" />
+                    </motion.div>
+
+                    {/* Right Column (Emotional Memory Layer) */}
+                    <motion.div
+                        className="flex flex-col items-center text-center mt-12 md:mt-0"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    >
+                        <img src={imgM05} alt="나의 골프스토리 그 시절 그 라운드 (Emotion)" className="w-[180px] md:w-[220px] h-auto object-contain mb-8 md:mb-12" />
+
+                        <h4 className="text-[#D94F7B] text-sm md:text-base font-medium mb-4 tracking-widest uppercase">
+                            EMOTIONAL MEMORY LAYER
+                        </h4>
+                        <h3 className="text-[#E0E0E0] text-lg md:text-xl font-bold mb-6">
+                            감정 회상을 위한 감성 중심 설계
+                        </h3>
+                        <p className="text-[#888888] text-[15px] md:text-base leading-[1.7] whitespace-pre-line mb-16 break-keep">
+                            {`플레이 당시의 시간, 장소, 동반자를 중심으로\n감정적 기억을 구조화한 경험 기록형 서비스\n\n정서적 몰입과 회상을 위한 타임라인 기반 UI로 설계`}
+                        </p>
+
+                        <img src={imgM07} alt="Emotional Memory Phone Mockup" className="w-full max-w-[500px] h-auto object-contain" />
+                    </motion.div>
+                </div>
+            </section>
 
             {/* 08 - 화면 전체 너비로 배색된 큰 텍스트 강조(Highlight) 영역 */}
             <ProjectHighlight text="Data driven golf experience." bgColor="bg-[#010101]" textColor="text-white" />
