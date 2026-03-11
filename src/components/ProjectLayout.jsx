@@ -666,7 +666,7 @@ export function ProjectPhoneWithMarquee({ phoneImage, title, keywords, bgColor =
                     <motion.div
                         className="flex whitespace-nowrap flex-shrink-0"
                         animate={{ x: ["0%", "-50%"] }}
-                        transition={{ ease: "linear", duration: 80, repeat: Infinity }}
+                        transition={{ ease: "linear", duration: 160, repeat: Infinity }}
                     >
                         {/* Render twice for seamless loop - 50% translation shifts exactly one content block */}
                         <MarqueeContent items={rowRepeated} />
@@ -691,7 +691,7 @@ export function ProjectPhoneWithMarquee({ phoneImage, title, keywords, bgColor =
 
                 {/* Right: Text */}
                 <motion.div
-                    className="flex flex-col justify-center text-center md:text-left md:pl-8 lg:pl-16 -mt-10 md:-mt-20"
+                    className="flex flex-col justify-center text-center md:text-left md:pl-8 lg:pl-16 -mt-20 md:-mt-32"
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
