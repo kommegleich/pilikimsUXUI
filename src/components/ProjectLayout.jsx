@@ -641,21 +641,21 @@ export function ProjectThreeColTextBlocks({ label, columns, bgColor = "bg-transp
 }
 
 // 18. Phone with Background Keyword Marquee
+const MarqueeContent = ({ items }) => (
+    <div className="flex gap-4 md:gap-6 px-2 md:px-3">
+        {items.map((kw, i) => (
+            <div key={i} className="px-5 md:px-8 py-2 md:py-3 rounded-full bg-[#1A1A1A] text-[#888888] text-[14px] md:text-[16px] border border-[#333333] whitespace-nowrap font-medium flex-shrink-0">
+                {kw}
+            </div>
+        ))}
+    </div>
+);
+
 export function ProjectPhoneWithMarquee({ phoneImage, title, keywordsRow1, keywordsRow2, bgColor = "bg-[#010101]" }) {
     // Generate a repeating array for seamless marquee
     const REPEAT_COUNT = 8;
     const row1Repeated = Array(REPEAT_COUNT).fill(keywordsRow1).flat();
     const row2Repeated = Array(REPEAT_COUNT).fill(keywordsRow2).flat();
-
-    const MarqueeContent = ({ items }) => (
-        <div className="flex gap-4 md:gap-6 px-2 md:px-3">
-            {items.map((kw, i) => (
-                <div key={i} className="px-5 md:px-8 py-2 md:py-3 rounded-full bg-[#1A1A1A] text-[#888888] text-[14px] md:text-[16px] border border-[#333333] whitespace-nowrap font-medium flex-shrink-0">
-                    {kw}
-                </div>
-            ))}
-        </div>
-    );
 
     return (
         <section className={`w-full relative py-32 md:py-48 overflow-hidden flex justify-center items-center min-h-[60vh] md:min-h-[80vh] ${bgColor}`}>
