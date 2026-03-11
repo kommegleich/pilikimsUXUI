@@ -40,8 +40,35 @@ function Project03() {
                 title="스코어를 게이밍하다"
                 subtitle="스마트스코어 프리미엄 멤버십 전용 서비스"
                 metaItems={[
-                    { label: "OVERVIEW", value: "단순한 점수 기록을 넘어 방대한 스코어 데이터를 기반으로 유저의 플레이 패턴을 분석하고 감성적인 스토리로 풀어낸, 초개인화 리포트 서비스입니다." },
-                    { label: "SCOPE", value: ["UX 설계", "UI 화면설계", "약 2개월"] }
+                    {
+                        label: "OVERVIEW",
+                        value: "단순한 점수 기록을 넘어 방대한 스코어 데이터를 기반으로 유저의 플레이 패턴을 분석하고 감성적인 스토리로 풀어낸, 스마트스코어 프리미엄 멤버십 전용 초개인화 리포트 서비스"
+                    },
+                    {
+                        label: "SCOPE",
+                        value: [
+                            "UX 설계",
+                            "UI 화면설계",
+                            "약 2개월"
+                        ]
+                    },
+                    {
+                        label: "RESULTS",
+                        value: [
+                            <span>
+                                <strong>프리미엄 멤버십 전환 기여</strong><br />
+                                단순 유료화가 아닌 가치 중심의 리포트 제공을 통해 프리미엄 멤버십 가입 유도 및 리텐션 강화에 기여
+                            </span>,
+                            <span>
+                                <strong>데이터 기반 경험 개인화</strong><br />
+                                방대한 스코어 데이터를 사용자 개인의 플레이 성향과 성과로 재해석하여 차별화된 맞춤형 인사이트 제공
+                            </span>,
+                            <span>
+                                <strong>감성적 스토리텔링 구현</strong><br />
+                                기록 중심의 UI를 넘어 당시의 분위기와 동반자와와의 추억을 회상하게 하는 인터페이스로 사용자 만족도 제고
+                            </span>
+                        ]
+                    }
                 ]}
                 bgImage={imgHero}
                 isFullHeight={true}
