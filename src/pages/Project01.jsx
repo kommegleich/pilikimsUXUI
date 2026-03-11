@@ -34,6 +34,7 @@ function Project01() {
             nextProjectDesc="스마트스코어 앱 내에서 누구나 손쉽게 대회에 참여할 수 있도록, \n복잡한 참가 신청의 진입 장벽을 낮추고 직관적인 흐름으로 개선한 아마추어 골프 리그 선수 등록 UX/UI 고도화 프로젝트"
         >
 
+            {/* 01 - 메인 제목과 오버뷰 내용이 적혀있음 (OVERVIEW, SCOPE, RESULTS) */}
             <ProjectHeroExact
                 title="골프장 통합 ERP 솔루션"
                 subtitle="골프장 관리의 새로운 기준, 골프장 모든 프로세스를 한번에!"
@@ -72,10 +73,12 @@ function Project01() {
                 ]}
             />
 
+            {/* 02 - 전체 화면을 채우는 풀사이즈 메인 이미지 영역 */}
             <ProjectFullMedia
                 src={imgM01}
             />
 
+            {/* 03 - 플로우차트 / 계층구조 다이어그램을 보여주는 ERP 트리 구조 영역 */}
             <ProjectTreeChart
                 chip="Flowchart"
                 title="골프장 업무관리에 대한 세분화 및 2Depth 기능분류"
@@ -104,6 +107,7 @@ function Project01() {
                 ]}
             />
 
+            {/* 04 - 텍스트(설명)와 여러 이미지(인터랙션/컴포넌트 등)가 좌우로 나뉘어 전환되는 영역 */}
             <ProjectFullMediaWithTitle
                 chip="Design Framework"
                 title="디자인 표준화와 모듈 자산화에서부터 인터렉션 원칙 수립까지"
@@ -119,12 +123,14 @@ function Project01() {
                 layout="split"
             />
 
+            {/* 05 - 슬라이드 형식으로 이미지가 무한 스크롤되는 마키(Marquee) 영역 */}
             <ProjectImageMarquee
                 images={pagesImages}
                 bgColor="bg-[#10182B]"
                 speed={20}
             />
 
+            {/* 06 - 강조할 핵심 기획/UX 사례 등을 3단 컬럼 형태로 설명하는 영역 */}
             <ProjectGrid3Col
                 chip="UX CASE STUDY"
                 bgColor="bg-[#10182B]"
@@ -144,6 +150,7 @@ function Project01() {
                 ]}
             />
 
+            {/* 07 - 포스터 스타일의 대형 이미지와 우측 캡션 설명 영역 */}
             <ProjectPosterWithText
                 image={pos01}
                 chip="MULTIPLE DEVICES UXUI"
@@ -151,6 +158,7 @@ function Project01() {
                 subtitle={"직군 간의 업무 연결성을 최우선으로 고려하여\n파트 간 전환이 매끄러운 사용자 여정을 설계하는 데 집중했습니다."}
             />
 
+            {/* 08 - 좌측에는 타이틀 텍스트, 우측에 꽉 차는 이미지로 구성된 2단 레이아웃 영역 */}
             <ProjectTwoColumnMedia
                 chip="erp app"
                 title={"내 손안의 컨트롤,\n웹과 앱의 연동으로 사용성 강화"}

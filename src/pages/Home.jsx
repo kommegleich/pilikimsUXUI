@@ -20,6 +20,7 @@ function Home() {
 
   return (
     <>
+      {/* 01 - Main Hero & Introduction (PLK Logo & Subtitle) */}
       <section className="relative w-full h-screen bg-white flex flex-col items-center justify-center overflow-hidden">
         {/* Main Interaction Area */}
         <div
@@ -77,7 +78,7 @@ function Home() {
       </section>
 
 
-      {/* Projects Section (Posterco Style) */}
+      {/* 02 - Projects List Section (포트폴리오 리스트) */}
       <section id="projects" className="w-full bg-[#0d0d0d] pt-64 pb-96 text-white">
         <div className="w-full px-4 md:px-8 mb-24 flex justify-center">
           <h2 className="text-[clamp(4.5rem,12vw,14rem)] font-black tracking-tighter leading-tight px-2 text-center">PROJECTS.</h2>
@@ -197,7 +198,7 @@ function Home() {
         )}
       </AnimatePresence>
 
-      {/* Expertise Section */}
+      {/* 03 - Expertise Section (사용 툴 및 스펙 정리) */}
       <section id="expertise" className="relative w-full h-[200vh] bg-[#fff] text-[#121212]">
         <div className="sticky top-0 w-full h-screen flex flex-col justify-center overflow-hidden">
           <div className="w-full px-4 md:px-8 mb-16 xl:mb-24 flex justify-center">
@@ -277,7 +278,7 @@ function Home() {
         </div>
       </section>
 
-      {/* My Approach Section */}
+      {/* 04 - My Approach Section (작업 방식 및 철학 소개) */}
       <section id="approach" className="w-full bg-[#0d0d0d] pt-32 pb-48 text-white relative">
         <div className="w-full px-4 md:px-8 mb-24 flex flex-col items-center">
           <div className="mb-12">

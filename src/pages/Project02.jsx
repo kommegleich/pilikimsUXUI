@@ -12,9 +12,11 @@ function Project02() {
             nextProjectLink="/project/3"
             nextProjectTitle="스코어를 게이밍하다"
             nextProjectBg="bg-gradient-to-r from-[#00FF37] to-[#FF00FB]"
+            nextProjectDesc="단순한 점수 기록을 넘어 방대한 스코어 데이터를 기반으로 유저의 플레이 패턴을 분석하고 감성적인 스토리로 풀어낸, \n스마트스코어 프리미엄 멤버십 전용 초개인화 리포트 서비스"
             bgColor="bg-[#09122A]"
             textColor="text-white"
         >
+            {/* 01 - 메인 제목과 오버뷰, 성과 지표(RESULTS) 내용이 적혀있음 */}
             <ProjectHeroExact
                 title="ARMATURE GOLF LEAGUE (SAGL)"
                 subtitle="앱에서 참가 가능한 아마추어 골프리그"
@@ -43,6 +45,8 @@ function Project02() {
                 subtitleColor="text-white/60"
                 labelColor="text-white/40"
             />
+
+            {/* 02 - 나란히 배치되는 2장의 모바일/포스터 이미지 영역 (여백 없음) */}
             <ProjectGrid
                 images={[
                     imgM01,
@@ -58,6 +62,8 @@ function Project02() {
                 gap="gap-0"
                 itemBg="bg-transparent"
             />
+
+            {/* 03 - 플로우차트와 라벨이 들어간 전체 너비 이미지 영역 */}
             <ProjectFullMediaWithTitle
                 label="FLOWCHART"
                 src={imgFC2}
@@ -67,6 +73,8 @@ function Project02() {
                 centered={true}
                 parallax={false}
             />
+
+            {/* 04 - 텍스트 단락으로 구성된 섹션 (기획/개선 주안점 등 설명) */}
             <ProjectSectionText
                 title="간편한 선수등록 프로세스 UX"
                 text={[
@@ -87,6 +95,8 @@ function Project02() {
                 textColor="text-white"
                 descColor="text-[#9A9BA5]"
             />
+
+            {/* 05 - 나란히 배치되는 2장의 목업(Mockup) 테두리 없는 이미지 영역 */}
             <ProjectGrid
                 images={[
                     imgM03,
