@@ -66,6 +66,7 @@ function Project03() {
             <ProjectCenteredHighlightBlock
                 label="Problem"
                 title="기존 스코어 서비스의 유료화가 사용자에게 거부감을 줄 수 있지 않을까?"
+                titleColor="bg-[linear-gradient(45deg,#17C350,#FBFF00)] bg-clip-text text-transparent"
                 text={<>
                     단순 과금 모델은 사용자 이탈과 부정적 반응을 초래할 수 있다고 판단<br />
                     직접적인 유료 전환보다는, 부가적 가치를 제공하는 방향의 유료화가 필요하다는 결론에 도달
@@ -79,21 +80,21 @@ function Project03() {
                     {
                         title: "유료 전환을 가능하게 할\n새로운 가치는 무엇인가",
                         text: <>
-                            <span>내부 논의를 통해 단순 유료화 대신,<br />새로운 경험이나 부가 기능을 통해 사용자가 <span className="text-[#00FF37] font-semibold">지불할 만한 가치</span>를<br />느낄 수 있어야 한다는 점이 정리되었습니다.</span>
+                            <span>내부 논의를 통해 단순 유료화 대신,<br />새로운 경험이나 부가 기능을 통해 사용자가 <span className="bg-[linear-gradient(45deg,#17C350,#FBFF00)] bg-clip-text text-transparent font-semibold">지불할 만한 가치</span>를<br />느낄 수 있어야 한다는 점이 정리되었습니다.</span>
                             <span>이에 따라 어떤 가치가 유료화 대상이 될 수 있을지<br />시장과 사용자 데이터를 통해 탐색하기 시작했습니다.</span>
                         </>
                     },
                     {
                         title: "서비스 내에서 유료화 기회가\n가장 높은 기능은 무엇인가",
                         text: <>
-                            <span>실제 사용자 로그를 분석한 결과,<br />전체 기능 중 가장 많이 사용되고 오랫동안 머무는 곳은<br /><span className="text-[#00FF37] font-semibold">스코어</span>였습니다.</span>
+                            <span>실제 사용자 로그를 분석한 결과,<br />전체 기능 중 가장 많이 사용되고 오랫동안 머무는 곳은<br /><span className="bg-[linear-gradient(45deg,#17C350,#FBFF00)] bg-clip-text text-transparent font-semibold">스코어</span>였습니다.</span>
                             <span>실제 핵심사용자, 즉 골퍼들은<br />자신의 플레이를 돌아보는 경향이 강했고,<br />기존 40-60대 중장년층 사용자 외에도 20-30대의 신규 유입 사용<br />자가 빠르게 증가하고 있었습니다.</span>
                         </>
                     },
                     {
                         title: "동종 업계 서비스는\n어떤 경험에 가치를 두고 있는가",
                         text: <>
-                            <span>골프존, 카카오VX 등 유사 서비스를 조사한 결과,<br />최근 무료 기능은 <span className="text-[#00FF37] font-semibold">단순 정보 제공보다 개인 맞춤형 분석</span>과 피드백<br />중심으로 설계되고 있었습니다.</span>
+                            <span>골프존, 카카오VX 등 유사 서비스를 조사한 결과,<br />최근 무료 기능은 <span className="bg-[linear-gradient(45deg,#17C350,#FBFF00)] bg-clip-text text-transparent font-semibold">단순 정보 제공보다 개인 맞춤형 분석</span>과 피드백<br />중심으로 설계되고 있었습니다.</span>
                             <span>플레이 이력 기반 성향 분석과 목표 제시가 과금 유도에 효과적이<br />며, 실질적인 인사이트 제공이 핵심 가치로 자리잡고 있음을 확인했<br />습니다.</span>
                         </>
                     }

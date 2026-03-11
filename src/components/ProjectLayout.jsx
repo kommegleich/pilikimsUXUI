@@ -575,7 +575,7 @@ export function ProjectCenteredIntro({ title, text, bgColor = "bg-transparent", 
 // 16. Centered Highlight Block (Problem statement)
 export function ProjectCenteredHighlightBlock({ label, title, text, bgColor = "bg-transparent", titleColor = "text-[#00FF00]", descColor = "text-[#9A9BA5]", labelColor = "text-[#555555]" }) {
     return (
-        <section className={`w-full py-24 md:py-32 px-6 flex justify-center text-center ${bgColor}`}>
+        <section className={`w-full pt-24 md:pt-32 pb-12 md:pb-16 px-6 flex justify-center text-center ${bgColor}`}>
             <motion.div
                 className="w-full max-w-[1000px] flex flex-col items-center"
                 initial={{ opacity: 0, y: 30 }}
@@ -602,7 +602,7 @@ export function ProjectCenteredHighlightBlock({ label, title, text, bgColor = "b
 // 17. Three Column Text Blocks (Search)
 export function ProjectThreeColTextBlocks({ label, columns, bgColor = "bg-transparent", labelColor = "text-[#555555]" }) {
     return (
-        <section className={`w-full py-24 md:py-40 px-6 md:px-12 flex justify-center ${bgColor}`}>
+        <section className={`w-full pt-12 md:pt-16 pb-24 md:pb-40 px-6 md:px-12 flex justify-center ${bgColor}`}>
             <div className="w-full max-w-[1600px] flex flex-col items-center">
                 {label && (
                     <motion.p
@@ -620,7 +620,7 @@ export function ProjectThreeColTextBlocks({ label, columns, bgColor = "bg-transp
                     {columns.map((col, idx) => (
                         <motion.div
                             key={idx}
-                            className="flex flex-col gap-6 md:gap-10 border-t border-[#333] md:border-t-0 md:border-l border-opacity-30 pt-8 mt-4 md:mt-0 md:pt-0 md:pl-8 lg:pl-12 first:border-none first:pt-0 first:mt-0 first:pl-0"
+                            className="flex flex-col items-center text-center gap-6 md:gap-10 pt-8 border-t border-[#333] border-opacity-30 md:border-none md:pt-0 mt-4 md:mt-0 first:border-none first:pt-0 first:mt-0"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -629,7 +629,7 @@ export function ProjectThreeColTextBlocks({ label, columns, bgColor = "bg-transp
                             <h3 className={`text-[20px] md:text-[24px] font-medium leading-[1.4] whitespace-pre-line ${col.titleColor || 'text-white'}`}>
                                 {col.title}
                             </h3>
-                            <div className={`text-[13px] md:text-[14px] leading-[1.8] font-normal whitespace-pre-line break-keep flex flex-col gap-4 ${col.descColor || 'text-[#9A9BA5]'}`}>
+                            <div className={`text-[13px] md:text-[14px] leading-[1.8] font-normal whitespace-pre-line break-keep flex flex-col gap-4 items-center ${col.descColor || 'text-[#9A9BA5]'}`}>
                                 {col.text}
                             </div>
                         </motion.div>
