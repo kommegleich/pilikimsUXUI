@@ -314,7 +314,7 @@ function Home() {
               const isActive = isMobile && activeCard === 0;
               return (
                 <div
-                  className="group relative w-full aspect-[4/5] sm:aspect-[3.5/5] bg-[#ffffff] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.05] md:hover:scale-[1.15] hover:z-50 transition-transform duration-300 ease-out shadow-2xl"
+                  className="group relative w-full aspect-[4/5] sm:aspect-[3.5/5] bg-[#ffffff] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden cursor-pointer md:hover:scale-[1.15] md:hover:z-50 transition-transform duration-300 ease-out shadow-2xl"
                   onClick={() => handleCardClick(0)}
                 >
                   {/* Layer 0 — 이미지: 데스크탑 group-hover, 모바일 클릭 */}
@@ -361,7 +361,7 @@ function Home() {
               const isActive = isMobile && activeCard === 1;
               return (
                 <div
-                  className="group relative w-full aspect-[4/5] sm:aspect-[3.5/5] bg-[#d9331d] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.05] md:hover:scale-[1.15] hover:z-50 transition-transform duration-300 ease-out shadow-2xl"
+                  className="group relative w-full aspect-[4/5] sm:aspect-[3.5/5] bg-[#d9331d] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden cursor-pointer md:hover:scale-[1.15] md:hover:z-50 transition-transform duration-300 ease-out shadow-2xl"
                   onClick={() => handleCardClick(1)}
                 >
                   <div className={`absolute inset-0 z-0 transition-opacity duration-500 ease-in-out ${
@@ -404,7 +404,7 @@ function Home() {
               const isActive = isMobile && activeCard === 2;
               return (
                 <div
-                  className="group relative w-full aspect-[4/5] sm:aspect-[3.5/5] bg-[#1b1b1b] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden cursor-pointer hover:scale-[1.05] md:hover:scale-[1.15] hover:z-50 transition-transform duration-300 ease-out shadow-2xl"
+                  className="group relative w-full aspect-[4/5] sm:aspect-[3.5/5] bg-[#1b1b1b] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden cursor-pointer md:hover:scale-[1.15] md:hover:z-50 transition-transform duration-300 ease-out shadow-2xl"
                   onClick={() => handleCardClick(2)}
                 >
                   <div className={`absolute inset-0 z-0 transition-opacity duration-500 ease-in-out ${
