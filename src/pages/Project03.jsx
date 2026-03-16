@@ -78,7 +78,7 @@ function Project03() {
             />
 
             {/* 02 - Overlapping phones image area - Adjusted negative margin for mobile to prevent overlap with title */}
-            <section className="w-full relative z-20 flex justify-center -mt-20 md:-mt-48 lg:-mt-[35vh] px-6 md:px-12 lg:px-16 pb-12 md:pb-24 mx-auto max-w-[2000px]">
+            <section className="w-full relative z-20 flex justify-center -mt-20 md:-mt-48 lg:-mt-[35vh] px-0 md:px-12 lg:px-16 pb-12 md:pb-24 mx-auto max-w-[2000px]">
                 <motion.img
                     src={imgM01}
                     alt="Phones mockups"
