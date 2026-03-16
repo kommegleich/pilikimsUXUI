@@ -95,7 +95,7 @@ function Project04() {
             <section className="w-full relative z-20 flex flex-col items-center pb-32 bg-gradient-to-br from-[#101010] to-[#021525]">
                 {/* Overlapping Image Container */}
                 <motion.div
-                    className="w-full max-w-[1240px] px-6 md:px-12 lg:px-16 -mt-32 md:-mt-56 mb-20 md:mb-32 z-30"
+                    className="w-full max-w-[1240px] px-0 md:px-12 lg:px-16 -mt-12 md:-mt-56 mb-20 md:mb-32 z-30"
                     {...fadeInSubtle}
                 >
                     <img
@@ -339,9 +339,9 @@ function Project04() {
                 </div>
 
                 {/* Background Section - z-10 so it goes behind the image using negative margin */}
-                <div className="w-full relative bg-[#030303] overflow-hidden flex flex-col items-center -mt-[25%] md:-mt-[20%] pt-[35%] md:pt-[30%] pb-32 md:pb-48 lg:pb-64 z-10 border-none outline-none">
+                <div className="w-full relative bg-[#030303] overflow-hidden flex flex-col items-center -mt-[25%] md:-mt-[20%] pt-[42%] md:pt-[30%] pb-32 md:pb-48 lg:pb-64 z-10 border-none outline-none">
                     {/* Content Container */}
-                    <div className="w-full max-w-[1240px] px-6 md:px-12 relative z-20 flex flex-col items-center -mt-8 md:mt-0 lg:mt-12">
+                    <div className="w-full max-w-[1240px] px-6 md:px-12 relative z-20 flex flex-col items-center mt-0 md:mt-0 lg:mt-12">
                         <motion.div
                             className="w-full flex flex-col items-center"
                             {...fadeInUp}
