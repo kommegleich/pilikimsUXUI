@@ -63,15 +63,23 @@ function Project02() {
                 itemBg="bg-transparent"
             />
 
-            {/* 03 - 플로우차트와 라벨이 들어간 전체 너비 이미지 영역 */}
-            <ProjectFullMediaWithTitle
-                label="FLOWCHART"
-                src={imgFC2}
-                bgColor="bg-transparent"
-                textColor="text-white"
-                objectFit="object-cover"
-                centered={true}
-                parallax={false}
+            {/* 03 - 플로우차트 / 계층구조 다이어그램 (기존 이미지 대신 코드 기반 차트로 개선) */}
+            <ProjectTreeChart
+                chip="Flowchart"
+                title="참가 신청 프로세스 최적화 및 사용자 여정 설계"
+                subtitle={
+                    <>
+                        사용자가 대회를 검색하고 조회하는 시점부터 최종 선수 등록이 완료되는 시점까지의 전체 여정을 설계했습니다.
+                        <br />복잡한 신청 단계를 최소화하고, 골퍼들에게 익숙한 예약 플로우를 적용하여 직관적이고 끊김 없는 사용자 경험을 구축했습니다.
+                    </>
+                }
+                rootNode="선수등록 프로세스"
+                branches={[
+                    { title: "대회 탐색", children: ["검색 (GOLF SEARCH)", "캘린더 (CALENDAR)", "지도 (MAP)"] },
+                    { title: "골프장 및 티타임", children: ["골프장 선택", "티타임 선택", "카테고리 필터"] },
+                    { title: "정보 확인 및 약관", children: ["지역 선택", "내장 약관 동의", "필수 정보 체크"] },
+                    { title: "등록 완료", children: ["선수 참가 등록 완료"] }
+                ]}
             />
 
             {/* 04 - 텍스트 단락으로 구성된 섹션 (기획/개선 주안점 등 설명) */}
