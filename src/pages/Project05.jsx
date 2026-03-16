@@ -216,8 +216,8 @@ function Project05() {
             </section>
 
             {/* 04 - PHONE MOCKUP MARQUEE */}
-            <section className="w-full bg-[#1B2035] overflow-hidden py-24 md:py-40 lg:py-56">
-                <div className="relative flex overflow-hidden">
+            <section className="w-full min-h-[100svh] bg-[#1B2035] overflow-hidden flex items-center">
+                <div className="relative flex overflow-hidden w-full">
                     <motion.div
                         className="flex"
                         animate={{ x: ['0%', '-50%'] }}
@@ -228,7 +228,7 @@ function Project05() {
                                 <img
                                     src={img}
                                     alt={`payis screen ${(idx % 8) + 1}`}
-                                    className="h-[240px] md:h-[500px] w-auto object-contain rounded-[18px] md:rounded-[32px] shadow-[0_8px_40px_rgba(0,0,0,0.4)]"
+                                    className="h-[65vh] md:h-[75vh] w-auto object-contain rounded-[18px] md:rounded-[32px] shadow-[0_8px_40px_rgba(0,0,0,0.4)]"
                                 />
                             </div>
                         ))}
