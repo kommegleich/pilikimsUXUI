@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectLayout } from '../components/ProjectLayout';
 import imgCharacter from '../images/project5-m1.webp';
@@ -41,6 +41,12 @@ function Arr({ dir = 'right' }) {
 }
 
 function Project05() {
+    useEffect(() => {
+        const html = document.documentElement;
+        html.style.scrollSnapType = 'y mandatory';
+        return () => { html.style.scrollSnapType = ''; };
+    }, []);
+
     return (
         <ProjectLayout
             nextProjectLink="/project/6"
@@ -51,7 +57,7 @@ function Project05() {
             textColor="text-[#121212]"
         >
             {/* 01 - HERO */}
-            <section className="w-full min-h-[100svh] bg-[#0066FF] flex flex-col justify-between overflow-hidden">
+            <section className="snap-start w-full min-h-[100svh] bg-[#0066FF] flex flex-col justify-between overflow-hidden">
                 {/* TOP: title + OVERVIEW + SCOPE (like other project pages) */}
                 <div className="w-full px-5 md:px-12 lg:px-16 pt-28 md:pt-40 flex justify-center">
                     <motion.div
@@ -105,7 +111,7 @@ function Project05() {
             </section>
 
             {/* 02 - "기본에 충실한 앱" */}
-            <section className="w-full bg-white flex flex-col items-center py-24 md:py-40 px-6 md:px-12">
+            <section className="snap-start w-full min-h-[100svh] bg-white flex flex-col items-center justify-center py-24 md:py-40 px-6 md:px-12">
                 <motion.div className="flex flex-col items-center text-center" {...fadeInUp}>
                     <span className="text-[#0066FF] text-sm md:text-base font-semibold mb-4 tracking-wide">필요한 기능만 최소한으로!</span>
                     <h2 className="text-[#111] text-4xl md:text-6xl lg:text-[80px] font-bold tracking-[-0.03em]">기본에 충실한 앱</h2>
@@ -113,7 +119,7 @@ function Project05() {
             </section>
 
             {/* 03 - INFORMATION ARCHITECTURE */}
-            <section className="w-full bg-white flex flex-col items-center py-24 md:py-40 lg:py-56 px-4 md:px-8 lg:px-12 overflow-x-auto">
+            <section className="snap-start w-full min-h-[100svh] bg-white flex flex-col items-center justify-center py-24 md:py-40 px-4 md:px-8 lg:px-12 overflow-x-auto">
                 <motion.div className="w-full max-w-[1300px]" {...fadeInUp}>
                     <h3 className="text-[#9AAAC8] text-xl md:text-3xl font-semibold text-center mb-10 md:mb-16 tracking-wide">
                         Information Architecture
@@ -216,7 +222,7 @@ function Project05() {
             </section>
 
             {/* 04 - PHONE MOCKUP MARQUEE */}
-            <section className="w-full min-h-[100svh] bg-[#1B2035] overflow-hidden flex items-center">
+            <section className="snap-start w-full min-h-[100svh] bg-[#1B2035] overflow-hidden flex items-center">
                 <div className="relative flex overflow-hidden w-full">
                     <motion.div
                         className="flex"
