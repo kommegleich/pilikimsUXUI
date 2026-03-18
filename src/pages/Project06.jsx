@@ -20,11 +20,11 @@ function Project06() {
             bgColor="bg-[#F26027]"
             textColor="text-white"
         >
-            {/* A - HeroExact 유지 */}
+            {/* A - HeroExact */}
             <ProjectHeroExact
                 title="TALKAK 랜덤 사진전송 서비스"
                 subtitle="심플한 랜덤 사진 공유 소셜 서비스"
-                bgColor="bg-[#F26027]"
+                bgImage={imgM1}
                 textColor="text-white"
                 subtitleColor="text-white/80"
                 labelColor="text-white/60"
@@ -37,24 +37,22 @@ function Project06() {
             {/* B - 히어로 비주얼 섹션 */}
             <section className="relative w-full bg-[#F26027] min-h-[100svh] overflow-hidden">
                 <img src={imgBg3} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none" />
-                <div className="relative z-10 w-full flex flex-col md:flex-row" style={{ minHeight: 'inherit' }}>
-                    <div className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-28 md:pt-0 pb-8 md:pb-16">
+                <div className="relative z-10 w-full flex flex-col md:flex-row md:items-end" style={{ minHeight: 'inherit' }}>
+                    <div className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-28 md:pt-0 pb-8 md:pb-20">
                         <p className="text-[clamp(1.8rem,4.5vw,3.8rem)] font-semibold italic text-white leading-tight mb-4 md:mb-6">
                             "세상 사람들은<br />뭘하며 살까?"
                         </p>
                         <p className="text-[13px] md:text-base text-white max-w-xs md:max-w-sm leading-relaxed">
                             탈칵! 찍고 보내면 날아오는 심플한 사진 랜덤공유 서비스
                         </p>
+                    </div>
+                    {/* 인물 이미지 - 우하단 */}
+                    <div className="flex justify-end px-8 md:px-16 pb-0">
                         <img
                             src={imgM2}
                             alt="person"
-                            className="w-[140px] mt-8 self-start object-contain object-bottom
-                                       md:absolute md:bottom-0 md:left-8 lg:left-12 md:w-[240px] lg:w-[300px]
-                                       md:mt-0 pointer-events-none select-none"
+                            className="w-[160px] md:w-[260px] lg:w-[320px] object-contain object-bottom pointer-events-none select-none"
                         />
-                    </div>
-                    <div className="flex-1 flex items-center justify-center px-6 py-8 md:py-16">
-                        <img src={imgM1} alt="TALKAK 앱 목업" className="w-full max-w-[380px] md:max-w-full object-contain mix-blend-screen" />
                     </div>
                 </div>
             </section>
