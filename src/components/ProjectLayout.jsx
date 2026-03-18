@@ -36,7 +36,7 @@ export function ProjectLayout({ children, nextProjectLink, nextProjectTitle, nex
 }
 
 // 2. Exact Match Hero + Meta Section
-export function ProjectHeroExact({ title, subtitle, metaItems, bgColor = "bg-transparent", textColor = "text-[#121212]", subtitleColor = "text-gray-400", labelColor = "text-gray-500", bgImage, isFullHeight = false, dimOverlay = true, overlayClass = "bg-black/40" }) {
+export function ProjectHeroExact({ title, subtitle, metaItems, bgColor = "bg-transparent", textColor = "text-[#121212]", subtitleColor = "text-gray-400", labelColor = "text-gray-500", bgImage, isFullHeight = false, dimOverlay = true, overlayClass = "bg-black/40", metaBelow = false }) {
     return (
         <section className={`w-full ${bgColor} pt-28 md:pt-56 pb-16 md:pb-40 px-6 md:px-12 lg:px-16 flex justify-center ${isFullHeight ? 'min-h-[100svh] items-center' : ''} transition-colors duration-500 relative overflow-hidden`}>
             {bgImage && (
@@ -45,56 +45,90 @@ export function ProjectHeroExact({ title, subtitle, metaItems, bgColor = "bg-tra
                     {dimOverlay && <div className={`absolute inset-0 w-full h-full ${overlayClass}`}></div>}
                 </div>
             )}
-            <div className="w-full max-w-[1800px] grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start relative z-10">
 
-                {/* Left: Titles */}
-                <motion.div
-                    className="lg:col-span-7 flex flex-col"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <h1 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${textColor} whitespace-pre-line`}>
-                        {title}
-                    </h1>
-                    <h2 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${subtitleColor} whitespace-pre-line`}>
-                        {subtitle}
-                    </h2>
-                </motion.div>
-
-                {/* Right: Meta Information */}
-                <motion.div
-                    className="lg:col-span-5 flex flex-col gap-12 lg:pl-12"
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                >
-                    {metaItems.map((meta, idx) => (
-                        <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
-                            <div className="md:col-span-4">
+            {metaBelow ? (
+                /* 타이틀 아래 meta 배치 레이아웃 */
+                <div className="w-full max-w-[1800px] flex flex-col gap-10 relative z-10">
+                    <motion.div
+                        className="flex flex-col"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <h1 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${textColor} whitespace-pre-line`}>
+                            {title}
+                        </h1>
+                        <h2 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${subtitleColor} whitespace-pre-line`}>
+                            {subtitle}
+                        </h2>
+                    </motion.div>
+                    <motion.div
+                        className="flex flex-col md:flex-row gap-8 md:gap-16"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    >
+                        {metaItems.map((meta, idx) => (
+                            <div key={idx} className="flex flex-col gap-2">
                                 <h3 className={`text-[10px] md:text-xs font-bold tracking-[0.1em] ${labelColor} uppercase`}>
                                     {meta.label}
                                 </h3>
+                                <div className="flex flex-col gap-1">
+                                    {Array.isArray(meta.value) ? (
+                                        meta.value.map((v, i) => (
+                                            <p key={i} className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>{v}</p>
+                                        ))
+                                    ) : (
+                                        <p className={`text-sm md:text-[15px] font-medium leading-[1.6] max-w-xl ${textColor}`}>{meta.value}</p>
+                                    )}
+                                </div>
                             </div>
-                            <div className="md:col-span-8 flex flex-col gap-6">
-                                {/* If value is array (like Scope/Results), render list */}
-                                {Array.isArray(meta.value) ? (
-                                    meta.value.map((v, i) => (
-                                        <p key={i} className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>
-                                            {v}
-                                        </p>
-                                    ))
-                                ) : (
-                                    <p className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>
-                                        {meta.value}
-                                    </p>
-                                )}
+                        ))}
+                    </motion.div>
+                </div>
+            ) : (
+                /* 기본 좌/우 그리드 레이아웃 */
+                <div className="w-full max-w-[1800px] grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start relative z-10">
+                    <motion.div
+                        className="lg:col-span-7 flex flex-col"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <h1 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${textColor} whitespace-pre-line`}>
+                            {title}
+                        </h1>
+                        <h2 className={`text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[1.1] tracking-[-0.07em] ${subtitleColor} whitespace-pre-line`}>
+                            {subtitle}
+                        </h2>
+                    </motion.div>
+                    <motion.div
+                        className="lg:col-span-5 flex flex-col gap-12 lg:pl-12"
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    >
+                        {metaItems.map((meta, idx) => (
+                            <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+                                <div className="md:col-span-4">
+                                    <h3 className={`text-[10px] md:text-xs font-bold tracking-[0.1em] ${labelColor} uppercase`}>
+                                        {meta.label}
+                                    </h3>
+                                </div>
+                                <div className="md:col-span-8 flex flex-col gap-6">
+                                    {Array.isArray(meta.value) ? (
+                                        meta.value.map((v, i) => (
+                                            <p key={i} className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>{v}</p>
+                                        ))
+                                    ) : (
+                                        <p className={`text-sm md:text-[15px] font-medium leading-[1.6] ${textColor}`}>{meta.value}</p>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </motion.div>
-
-            </div>
+                        ))}
+                    </motion.div>
+                </div>
+            )}
         </section>
     );
 }

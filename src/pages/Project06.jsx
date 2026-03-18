@@ -24,8 +24,8 @@ function Project06() {
                 subtitle="심플한 랜덤 사진 공유 소셜 서비스"
                 bgImage={imgM1}
                 isFullHeight={true}
-                dimOverlay={true}
-                overlayClass="bg-gradient-to-r from-black/75 via-black/50 to-black/20"
+                dimOverlay={false}
+                metaBelow={true}
                 textColor="text-white"
                 subtitleColor="text-white/80"
                 labelColor="text-white/60"
