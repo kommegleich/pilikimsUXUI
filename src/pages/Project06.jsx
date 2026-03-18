@@ -3,11 +3,9 @@ import { ProjectLayout, ProjectHeroExact } from '../components/ProjectLayout';
 
 import imgBg1 from '../images/project6-bg1.webp';
 import imgBg2 from '../images/project6-bg2.webp';
-import imgBg3 from '../images/project6-bg3.webp';
 import imgFc  from '../images/project6-fc.webp';
 import imgLg1 from '../images/project6-lg1.webp';
 import imgM1  from '../images/project6-m1.webp';
-import imgM2  from '../images/project6-m2.webp';
 import imgT   from '../images/project6-t.webp';
 
 function Project06() {
@@ -22,10 +20,11 @@ function Project06() {
         >
             {/* A - HeroExact */}
             <ProjectHeroExact
-                title="TALKAK 랜덤 사진전송 서비스"
+                title="세상 사람들은 뭘하며 살까?"
                 subtitle="심플한 랜덤 사진 공유 소셜 서비스"
                 bgImage={imgM1}
                 isFullHeight={true}
+                dimOverlay={false}
                 textColor="text-white"
                 subtitleColor="text-white/80"
                 labelColor="text-white/60"
@@ -34,29 +33,6 @@ function Project06() {
                     { label: "SCOPE", value: ["UX 설계", "UI 화면설계", "약 6개월"] }
                 ]}
             />
-
-            {/* B - 히어로 비주얼 섹션 */}
-            <section className="relative w-full bg-[#F26027] min-h-[100svh] overflow-hidden">
-                <img src={imgBg3} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none" />
-                <div className="relative z-10 w-full flex flex-col md:flex-row md:items-end" style={{ minHeight: 'inherit' }}>
-                    <div className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-28 md:pt-0 pb-8 md:pb-20">
-                        <p className="text-[clamp(1.8rem,4.5vw,3.8rem)] font-semibold italic text-white leading-tight mb-4 md:mb-6">
-                            "세상 사람들은<br />뭘하며 살까?"
-                        </p>
-                        <p className="text-[13px] md:text-base text-white max-w-xs md:max-w-sm leading-relaxed">
-                            탈칵! 찍고 보내면 날아오는 심플한 사진 랜덤공유 서비스
-                        </p>
-                    </div>
-                    {/* 인물 이미지 - 우하단 */}
-                    <div className="flex justify-end px-8 md:px-16 pb-0">
-                        <img
-                            src={imgM2}
-                            alt="person"
-                            className="w-[160px] md:w-[260px] lg:w-[320px] object-contain object-bottom pointer-events-none select-none"
-                        />
-                    </div>
-                </div>
-            </section>
 
             {/* D - 개요 + 로고 시스템 split 섹션 */}
             <section className="w-full flex flex-col md:flex-row">
