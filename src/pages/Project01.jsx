@@ -81,7 +81,7 @@ function Project01() {
             {/* 03 - 플로우차트 / 계층구조 다이어그램을 보여주는 ERP 트리 구조 영역 */}
             <ProjectTreeChart
                 chip="Flowchart"
-                title="골프장 업무관리에 대한 세분화 및 2Depth 기능분류"
+                title="골프장 업무관리에 대한 세분화 및 2/Depth 기능분류"
                 subtitle={
                     <>
                         서비스 내 모든 사용자 시나리오를 정밀하게 분석하여 분기 조건과 예외 케이스를 포함한 전략적 플로우차트(Flowchart)를 구축했습니다.
